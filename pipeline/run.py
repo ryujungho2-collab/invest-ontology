@@ -373,7 +373,28 @@ def main():
     ontology = G.build(strat, total, sleeves, asset_state, events, flags, why, new_events, chronicle)
     (ROOT / 'docs').mkdir(exist_ok=True)
     (ROOT / 'docs' / 'ontology.json').write_text(json.dumps(ontology, ensure_ascii=False, indent=1), encoding='utf-8')
+    # 통찰 에이전트가 읽을 오늘의 상황 요약
+    context = {'date': str(day.date()), 'strategy': strat['label'], 'targets': {t: round(w, 4) for t, w in total.items() if w > 0.001},
+               'sleeves': sleeves, 'macro': macro, 'flags': flags, 'regime_rules': S.REGIME_RULES,
+               'issues': {n: {'ratio': e['ratio'], 'level': e.get('level'), 'links': e['links'], 'history': e['history'],
+                              'headlines': [h['title'] for h in e['headlines'][:4]]} for n, e in events.items()},
+               'analog_history': [{'name': a, 'why': why[a]} for a in analogs], 'paths': ontology.get('paths', []),
+               'forecast': {k: forecast_data[k] for k in ('current', 'long', 'scores')} if forecast_data else None}
+    (ROOT / 'data' / 'context.json').write_text(json.dumps(context, ensure_ascii=False, indent=1, default=str), encoding='utf-8')
+    insights = None
+    if os.environ.get('ANTHROPIC_API_KEY') and (day.weekday() == 0 or os.environ.get('FORCE_INSIGHT')):
+        try:                                     # 통찰 에이전트: 월요일(또는 수동 요청)에만 실행 — 비용 관리
+            import insight_agent
+            insight_agent.run()
+        except Exception as e:
+            print(f'통찰 에이전트 실패: {e}')
+    latest = ROOT / 'data' / 'insights' / 'latest.json'
+    if latest.exists():
+        insights = json.loads(latest.read_text(encoding='utf-8'))
+        import insight_agent as IA
+        IA.write_vault(insights, write_note, link, VAULT)
     dashboard.write(ROOT / 'docs' / 'index.html', {
+        'insights': insights,
         'graph': ontology, 'event_history': ev_hist, 'timeline': tl, 'forecast': forecast_data,
         'date': str(day.date()), 'generated': pd.Timestamp.now(tz='Asia/Seoul').strftime('%Y-%m-%d %H:%M KST'),
         'strategy': strat['label'], 'actions': actions or ['변경 없음 (규칙대로 유지)'],

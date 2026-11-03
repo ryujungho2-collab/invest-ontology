@@ -48,6 +48,13 @@ footer{max-width:1240px;margin:0 auto;padding:4px 16px 32px;color:var(--sub);fon
  <div class="card"><h2>매매 신호 · 200일선 ±3% 밴드</h2><div class="sig" id="sig"></div></div>
 </section>
 
+<section class="tab" id="t-통찰">
+ <div class="card"><div id="ihead"></div></div>
+ <div class="card s8"><h2>통찰</h2><div id="ilist"></div></div>
+ <div class="card s4"><h2>내 포트폴리오 관점</h2><p id="ilens"></p><h2 style="margin-top:16px">사각지대</h2><ul id="iblind"></ul><h2 style="margin-top:16px">가설</h2><div id="ihyp"></div><p class="sub">옵시디언 '통찰/가설 검토'에서 체크하면 채택되고, 다음 분석부터 추적됩니다.</p></div>
+ <div class="card"><h2>추론 과정 · 에이전트가 온톨로지를 탐색한 기록</h2><p class="sub">하네스 이벤트 스트림: 어떤 도구를 어떤 순서로 써서 결론에 도달했는지.</p><ol id="itrace" style="padding-left:20px;font-size:13.5px"></ol></div>
+</section>
+
 <section class="tab" id="t-예측">
  <div class="card s5"><h2>장기 기대수익 · 향후 10년 S&P500</h2><div id="ltbox"></div><div class="chart"><canvas id="ltchart" aria-label="CAPE 기반 10년 예측과 실제"></canvas></div><p class="sub">선: 각 시점에 그때까지의 데이터만으로 낸 예측(파랑)과 실제 10년 연평균 수익(주황).</p></div>
  <div class="card s7"><h2>단기 유사 국면 · 향후 12개월 <span id="stbadge"></span></h2><p class="sub" id="stnote"></p><table id="sttable"></table></div>
@@ -96,10 +103,10 @@ const pct = (v,d=1) => (v>=0?'+':'')+(v*100).toFixed(d)+'%';
 const esc = s => String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 document.getElementById('meta').textContent = `${D.date} 종가 기준 · ${D.strategy} · 생성 ${D.generated}`;
 // 탭
-const TABS=['개요','예측','이슈','거시','온톨로지','역사']; let drawn={};
+const TABS=['통찰','개요','예측','이슈','거시','온톨로지','역사']; let drawn={};
 nav.innerHTML = TABS.map(t=>`<button data-t="${t}">${t}</button>`).join('');
 function show(t){document.querySelectorAll('.tab').forEach(s=>s.classList.toggle('on',s.id==='t-'+t));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));
- if(!drawn[t]){drawn[t]=1;({개요:drawOverview,예측:drawForecast,이슈:drawIssues,거시:drawMacro,온톨로지:drawGraph,역사:drawHistory})[t]();} try{localStorage.setItem('tab',t)}catch(e){}}
+ if(!drawn[t]){drawn[t]=1;({통찰:drawInsights,개요:drawOverview,예측:drawForecast,이슈:drawIssues,거시:drawMacro,온톨로지:drawGraph,역사:drawHistory})[t]();} try{localStorage.setItem('tab',t)}catch(e){}}
 nav.onclick=e=>{if(e.target.dataset.t)show(e.target.dataset.t)};
 // 개요
 function drawOverview(){
@@ -118,6 +125,22 @@ function drawOverview(){
    {label:s.base,data:c.p,borderColor:css('--accent'),borderWidth:1.6,pointRadius:0},{label:'200일선',data:c.s,borderColor:css('--sub'),borderWidth:1,pointRadius:0},
    {label:'+3%',data:c.s.map(v=>v&&v*1.03),borderColor:css('--ok'),borderDash:[4,4],borderWidth:1,pointRadius:0},{label:'-3%',data:c.s.map(v=>v&&v*0.97),borderColor:css('--hot'),borderDash:[4,4],borderWidth:1,pointRadius:0}]},
    options:{maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{maxTicksLimit:6}}}}});});
+}
+// 통찰
+function goNode(id){show('온톨로지'); setTimeout(()=>{q.value=id; q.dispatchEvent(new Event('input'));},120);}
+function drawInsights(){
+ const I=D.insights; if(!I){ihead.innerHTML='<h2>아직 통찰 보고서가 없습니다</h2><p class="sub">통찰 에이전트는 Anthropic API 키가 등록되면 매주 월요일(또는 수동 실행 시) 온톨로지를 탐색해 보고서를 씁니다.</p>';return;}
+ const M=I.meta||{}; const cc={'높음':'st-on','중간':'lv 증가','낮음':'sub'};
+ ihead.innerHTML=`<p class="sub">${esc(M.author||'')} · 기준일 ${esc(M.context_date||'')} · 도구 호출 ${M.tool_calls??'-'}회</p><h2 style="font-size:22px;line-height:1.4;margin:6px 0 0">${esc(I.headline||'')}</h2>`;
+ ilist.innerHTML=(I.insights||[]).map((x,i)=>`<details ${i<2?'open':''} style="padding:12px 0"><summary><b>${i+1}. ${esc(x.title)}</b> <span class="${cc[x.confidence]||'sub'}">확신도 ${esc(x.confidence)}</span> <span class="sub">· ${esc(x.horizon)}</span></summary>
+  <p style="font-size:15.5px">${esc(x.thesis)}</p>
+  <h3>근거</h3><ul>${(x.evidence||[]).map(e=>`<li>${esc(e)}</li>`).join('')}</ul>
+  <h3>역사</h3><p>${esc(x.history_parallel)}</p><h3>반대 시나리오</h3><p>${esc(x.counter_view)}</p>
+  <h3>지켜볼 신호</h3><ul>${(x.watch||[]).map(e=>`<li>${esc(e)}</li>`).join('')}</ul>
+  <div class="chips">${(x.nodes||[]).map(n=>`<a class="chip" href="#" onclick="goNode('${esc(n).replace(/'/g,'')}');return false">${esc(n)}</a>`).join('')}</div></details>`).join('');
+ ilens.textContent=I.portfolio_lens||''; iblind.innerHTML=(I.blind_spots||[]).map(b=>`<li>${esc(b)}</li>`).join('');
+ ihyp.innerHTML=(I.hypotheses||[]).map(h=>`<div style="border-top:1px solid var(--line);padding:6px 0"><b>${esc(h.statement)}</b><div class="sub">기준: ${esc(h.check)} · 기한 ${esc(h.by)}</div></div>`).join('')+((I.hypothesis_reviews||[]).length?'<h3 style="margin-top:8px">이전 가설 점검</h3>'+I.hypothesis_reviews.map(r=>`<div class="sub">${esc(r.id)}: <b>${esc(r.status)}</b> ${esc(r.note)}</div>`).join(''):'');
+ itrace.innerHTML=(I.trace||[]).filter(t=>t.type!=='call').map(t=>t.type==='tool'?`<li><b>${esc(t.tool)}</b> <span class="sub">${esc(JSON.stringify(t.input||{}))} → ${t.output_chars}자</span><div class="sub" style="font-family:monospace;font-size:12px">${esc(t.output_preview)}…</div></li>`:`<li><span class="sub">${t.type==='thinking'?'💭 생각':'📝 메모'}</span> ${esc(t.text)}</li>`).join('');
 }
 // 예측
 function drawForecast(){

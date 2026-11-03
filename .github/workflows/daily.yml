@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 22 * * 1-5'   # UTC 22:00 = 한국 오전 7시 (미국 장 마감 후, 월~금)
   workflow_dispatch:          # Actions 탭에서 수동 실행 가능
+    inputs:
+      insight:
+        description: '통찰 에이전트도 실행 (API 비용 발생)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write             # 갱신된 노트를 저장소에 커밋하기 위해 필요
@@ -11,7 +16,7 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     concurrency: daily-ontology
     steps:
       - uses: actions/checkout@v4
@@ -21,6 +26,9 @@ jobs:
           cache: 'pip'
       - run: pip install -r requirements.txt
       - name: 파이프라인 실행
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}      # 없으면 통찰 에이전트만 건너뜀
+          FORCE_INSIGHT: ${{ inputs.insight && '1' || '' }}
         run: python pipeline/run.py
       - name: 노트·대시보드 커밋
         run: |
