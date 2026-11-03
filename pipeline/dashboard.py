@@ -70,6 +70,12 @@ footer{max-width:1240px;margin:0 auto;padding:4px 16px 32px;color:var(--sub);fon
 </section>
 
 <section class="tab" id="t-역사">
+ <div class="card"><h2>연표 · 금융 역사 × 시대 역사 (1950~)</h2>
+  <p class="sub">선: S&P500 총수익지수(로그) · 회색 띠: 미국 경기침체 · 점: 사건 (누르면 당시 상태와 이후 12개월 결과)</p>
+  <div class="chips" id="catf" style="margin:8px 0"></div>
+  <div class="chart" style="height:380px"><canvas id="tlchart" aria-label="1950년 이후 S&P500과 역사 사건 연표"></canvas></div>
+  <div id="evdetail" style="margin-top:12px"></div></div>
+ <div class="card"><h2>사건 목록 · 당시 상태와 이후 결과</h2><div style="overflow:auto"><table id="evtable"></table></div></div>
  <div class="card"><h2>오늘과 닮은 역사 국면</h2><div id="hist"></div></div>
  <div class="card"><h2>최근 자동 생성된 사건</h2><div id="evs"></div></div>
 </section>
@@ -129,10 +135,10 @@ function drawMacro(){
   {label:'장단기 금리차(%p)',data:M.curve,borderColor:css('--ok'),pointRadius:0,borderWidth:1.6}]},options:{maintainAspectRatio:false,scales:{x:{ticks:{maxTicksLimit:8}}}}});
 }
 // 온톨로지 지도
-const TC={'전략':'#111827','자산':'#1f4e8c','국가':'#0e7490','지역':'#0e7490','산업':'#7c3aed','원자재':'#b45309','요인':'#4b5563','기관':'#be185d','기업':'#9333ea','이슈':'#c2410c','사건':'#dc2626','국면':'#64748b','역사':'#15803d'};
+const TC={'전략':'#111827','자산':'#1f4e8c','국가':'#0e7490','지역':'#0e7490','산업':'#7c3aed','원자재':'#b45309','요인':'#4b5563','기관':'#be185d','기업':'#9333ea','이슈':'#c2410c','사건':'#dc2626','국면':'#64748b','역사':'#15803d','연표':'#94a3b8'};
 function drawGraph(){
- const G=D.graph, hidden=new Set();
- legend.innerHTML=G.types.map(t=>`<label><input type="checkbox" checked data-t="${t}"><span class="dot" style="background:${TC[t]}"></span>${t}</label>`).join('');
+ const G=D.graph, hidden=new Set(['연표']);
+ legend.innerHTML=G.types.map(t=>`<label><input type="checkbox" ${hidden.has(t)?'':'checked'} data-t="${t}"><span class="dot" style="background:${TC[t]||'#94a3b8'}"></span>${t}</label>`).join('');
  const els=[...G.nodes.map(n=>{const p=n.props||{};return {data:{id:n.id,label:n.id,type:n.type,held:!!p['보유'],hot:(p['관심도']||0)>=1.5||p['켜짐']===true,sim:!!p['오늘과닮음']}}}),
   ...G.edges.map((e,i)=>({data:{id:'e'+i,source:e.source,target:e.target,rel:e.rel}}))];
  const cy=cytoscape({container:document.getElementById('cy'),elements:els,wheelSensitivity:0.25,
@@ -144,6 +150,7 @@ function drawGraph(){
    {selector:'edge',style:{'width':1,'line-color':css('--line'),'curve-style':'bezier','target-arrow-shape':'triangle','target-arrow-color':css('--line'),'arrow-scale':0.6}},
    {selector:'.faded',style:{'opacity':0.12}},{selector:'edge.hl',style:{'line-color':css('--accent'),'target-arrow-color':css('--accent'),'width':2,'label':'data(rel)','font-size':9,'color':css('--sub')}}],
   layout:{name:'cose',animate:false,nodeRepulsion:9000,idealEdgeLength:70,randomize:false}});
+ cy.nodes().forEach(n=>n.style('display',hidden.has(n.data('type'))?'none':'element'));
  const focus=id=>{const n=cy.getElementById(id); if(!n.length) return; cy.elements().removeClass('faded hl'); const nb=n.closedNeighborhood();
   cy.elements().not(nb).addClass('faded'); nb.edges().addClass('hl'); cy.animate({fit:{eles:nb,padding:60}},{duration:300}); panelFor(id);};
  const panelFor=id=>{const node=G.nodes.find(x=>x.id===id); const p=node.props||{};
@@ -159,7 +166,35 @@ function drawGraph(){
  const held=G.nodes.find(n=>n.type==='전략'); if(held) setTimeout(()=>focus(held.id),50);
 }
 // 역사
+const CC={'전쟁·분쟁':'#dc2626','정치·외교':'#7c3aed','기술':'#0e7490','보건':'#15803d','재해':'#a16207','에너지':'#b45309','무역':'#be185d','통화·금융정책':'#1f4e8c','금융위기':'#111827','사회':'#64748b'};
+function evDetail(e){ if(!e) return '';
+ const st=Object.entries(e.state||{}).map(([k,v])=>`<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join('');
+ const fw=Object.entries(e.fwd||{}).map(([k,v])=>`<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join('');
+ return `<h3>${esc(e.month)} · ${esc(e.title)} <span class="chip" style="border-left:6px solid ${CC[e.category]||'#888'}">${esc(e.category)}</span></h3><p>${esc(e.description)}</p>
+  <div class="sub">연결: ${(e.links||[]).map(esc).join(', ')}${e.recession?' · 경기침체 중':''}</div>
+  <div style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:8px"><div><h3>당시 시장 상태</h3><table>${st}</table></div><div><h3>이후 12개월 결과</h3><table>${fw||'<tr><td class="sub">아직 12개월이 지나지 않음</td></tr>'}</table></div></div>`;}
+function drawTimeline(){
+ const T=D.timeline; if(!T){tlchart.parentNode.innerHTML='<p class="sub">역사 데이터 없음</p>';return;}
+ const idx=Object.fromEntries(T.m.map((m,i)=>[m,i])); const on=new Set(Object.keys(CC));
+ catf.innerHTML=Object.entries(CC).map(([c,col])=>`<label class="chip" style="cursor:pointer"><input type="checkbox" checked data-c="${c}"> <span class="dot" style="background:${col}"></span> ${c}</label>`).join('');
+ const evPts=()=>T.events.filter(e=>on.has(e.category)&&idx[e.month]!=null).map(e=>({x:T.m[idx[e.month]],y:T.sp[idx[e.month]],e}));
+ const ymax=Math.max(...T.sp);
+ const ch=new Chart(tlchart,{data:{labels:T.m,datasets:[
+  {type:'bar',data:T.rec.map(v=>v?ymax*2:null),backgroundColor:'rgba(120,120,120,0.15)',barPercentage:1,categoryPercentage:1,order:3},
+  {type:'line',label:'S&P500 총수익',data:T.sp,borderColor:css('--accent'),borderWidth:1.4,pointRadius:0,order:2},
+  {type:'scatter',label:'사건',data:evPts(),pointRadius:5,pointHoverRadius:8,pointBackgroundColor:c=>CC[c.raw?.e?.category]||'#888',order:1}]},
+  options:{maintainAspectRatio:false,interaction:{mode:'nearest',intersect:true},plugins:{legend:{display:false},
+   tooltip:{filter:i=>i.datasetIndex===2,callbacks:{label:c=>`${c.raw.e.month} ${c.raw.e.title}`,afterLabel:c=>`이후 12개월 S&P500 ${c.raw.e.fwd_sp_12??'-'}%`}}},
+   scales:{y:{type:'logarithmic',ticks:{display:false}},x:{ticks:{maxTicksLimit:16,callback:function(v){const l=this.getLabelForValue(v);return l.endsWith('-01')?l.slice(0,4):''}}}},
+   onClick:(evt,els)=>{const p=els.find(x=>x.datasetIndex===2); if(p) evdetail.innerHTML=evDetail(ch.data.datasets[2].data[p.index].e);}}});
+ catf.onchange=ev=>{const c=ev.target.dataset.c; ev.target.checked?on.add(c):on.delete(c); ch.data.datasets[2].data=evPts(); ch.update();};
+ const rows=[...T.events].reverse();
+ evtable.innerHTML='<tr><th>연월</th><th>사건</th><th>분류</th><th>물가</th><th>금리차</th><th>고점 대비</th><th>이후12개월 S&P</th><th>금</th><th>원유</th></tr>'+rows.map((e,i)=>{const s=e.state||{},f=e.fwd||{};
+  return `<tr style="cursor:pointer" data-i="${i}"><td>${e.month}</td><td><b>${esc(e.title)}</b></td><td><span class="dot" style="background:${CC[e.category]||'#888'}"></span> ${esc(e.category)}</td><td>${esc(s['물가상승률']||'-')}</td><td>${esc(s['장단기 금리차(10년-3개월)']||'-')}</td><td>${esc(s['S&P500 고점 대비']||'-')}</td><td><b>${esc(f['S&P500']||'-')}</b></td><td>${esc(f['금']||'-')}</td><td>${esc(f['원유']||'-')}</td></tr>`}).join('');
+ evtable.onclick=ev=>{const tr=ev.target.closest('tr[data-i]'); if(tr){evdetail.innerHTML=evDetail(rows[+tr.dataset.i]); evdetail.scrollIntoView({behavior:'smooth',block:'center'});}};
+}
 function drawHistory(){
+ drawTimeline();
  hist.innerHTML=D.analogs.map(h=>`<details open><summary><b>${esc(h.name)}</b> <span class="sub">· ${esc(h.why)}</span></summary><p>${esc(h.text)}</p></details>`).join('')||'<p class="sub">현재 국면·이슈와 닮은 역사 국면 없음</p>';
  const ev=D.graph.nodes.filter(n=>n.type==='사건');
  evs.innerHTML=ev.map(n=>`<details><summary>${esc(n.id)}</summary><ul>${(n.props['헤드라인']||[]).map(h=>`<li>${esc(h)}</li>`).join('')}</ul></details>`).join('')||'<p class="sub">오늘 새로 생긴 사건 없음 (관심도 1.5배 이상 급증 시 자동 생성)</p>';

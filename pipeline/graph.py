@@ -12,10 +12,10 @@
 """
 import seeds as S
 
-TYPE_ORDER = ['전략', '자산', '국가', '지역', '산업', '원자재', '요인', '기관', '기업', '이슈', '사건', '국면', '역사']
+TYPE_ORDER = ['전략', '자산', '국가', '지역', '산업', '원자재', '요인', '기관', '기업', '이슈', '사건', '국면', '역사', '연표']
 
 
-def build(strat, total, sleeves, asset_state, events, flags, analogs_why, new_events):
+def build(strat, total, sleeves, asset_state, events, flags, analogs_why, new_events, chronicle=()):
     nodes, edges = {}, []
 
     def node(i, t, **props):
@@ -60,6 +60,13 @@ def build(strat, total, sleeves, asset_state, events, flags, analogs_why, new_ev
     for ev in new_events:
         node(ev['id'], '사건', 날짜=ev['date'], 관심도=ev['ratio'], 헤드라인=ev['headlines'])
         edge(ev['id'], ev['theme'], '발생')
+    for r in chronicle:          # 시대·금융 연표 사건 (당시 상태와 이후 결과 포함)
+        cid = f"{r['month']} {r['title']}"
+        node(cid, '연표', 분류=r['category'], 설명=r['description'],
+             **{f'당시 {k}': v for k, v in r.get('state', {}).items() if k in ('물가상승률', '장단기 금리차(10년-3개월)', 'S&P500 고점 대비')},
+             **{f'이후12개월 {k}': v for k, v in r.get('fwd', {}).items() if k in ('S&P500', '금', '원유', '미국 10년 국채')})
+        for x in r['links']:
+            edge(cid, x, '배경')
     # 관계 대상 중 아직 노드가 없는 것(예: 지수 티커)은 기본 노드로
     for e in edges:
         for k in ('source', 'target'):
@@ -73,7 +80,7 @@ def build(strat, total, sleeves, asset_state, events, flags, analogs_why, new_ev
 def impact_paths(graph, events, held, max_hops=4, per_theme=3, top_themes=8):
     """관심도 상위 이슈에서 출발해 관계를 따라 내 보유 자산까지 가는 최단 경로(최대 4단계).
     역사·국면·전략 노드는 경유하지 않는다(설명용 노드라 경로를 왜곡)."""
-    skip_types = {'역사', '국면', '전략', '사건'}
+    skip_types = {'역사', '국면', '전략', '사건', '연표'}
     ntype = {n['id']: n['type'] for n in graph['nodes']}
     adj = {}
     for e in graph['edges']:

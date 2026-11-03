@@ -123,7 +123,7 @@ def macro_state(fred):
 
 
 # ---------------------------------------------------------------- 옵시디언 노트
-def write_note(path, frontmatter, static_body, auto_body):
+def write_note(path, frontmatter, static_body, auto_body, section='현재 상태'):
     path.parent.mkdir(parents=True, exist_ok=True)
     auto = f'{AUTO_START}\n{auto_body.strip()}\n{AUTO_END}'
     if path.exists():                            # 사람이 쓴 부분은 보존, 자동 구간만 교체
@@ -133,7 +133,7 @@ def write_note(path, frontmatter, static_body, auto_body):
             path.write_text(text, encoding='utf-8')
             return
     fm = '---\n' + '\n'.join(f'{k}: {v}' for k, v in frontmatter.items()) + '\n---\n'
-    path.write_text(fm + static_body.strip() + '\n\n## 현재 상태\n' + auto + '\n', encoding='utf-8')
+    path.write_text(fm + static_body.strip() + f'\n\n## {section}\n' + auto + '\n', encoding='utf-8')
 
 
 def link(x):
@@ -321,12 +321,29 @@ def main():
                               '1개월': f'{p.iloc[-1] / p.iloc[-22] - 1:+.1%}'}
             if t in sleeves:
                 asset_state[t]['신호'] = '보유' if sleeves[t]['on'] else '청산'
+    # 하이브리드 역사: 금융 데이터(주 1회 갱신) × 시대 연표
+    import history_link as HL
+    hist_csv = ROOT / 'data' / 'history_monthly.csv'
+    stale = (not hist_csv.exists()) or (pd.Timestamp.now() - pd.Timestamp(hist_csv.stat().st_mtime, unit='s')).days >= 7
+    if stale:
+        try:
+            import history_data
+            history_data.build()
+            print('역사 데이터 갱신 완료')
+        except Exception as e:
+            print(f'역사 데이터 갱신 실패(기존 파일 사용): {e}')
+    chronicle, tl = [], None
+    if hist_csv.exists():
+        h, ev = HL.load()
+        chronicle = HL.event_rows(h, ev)
+        HL.write_notes(write_note, link, VAULT, chronicle)
+        tl = HL.timeline(h, chronicle)
     import graph as G
-    ontology = G.build(strat, total, sleeves, asset_state, events, flags, why, new_events)
+    ontology = G.build(strat, total, sleeves, asset_state, events, flags, why, new_events, chronicle)
     (ROOT / 'docs').mkdir(exist_ok=True)
     (ROOT / 'docs' / 'ontology.json').write_text(json.dumps(ontology, ensure_ascii=False, indent=1), encoding='utf-8')
     dashboard.write(ROOT / 'docs' / 'index.html', {
-        'graph': ontology, 'event_history': ev_hist,
+        'graph': ontology, 'event_history': ev_hist, 'timeline': tl,
         'date': str(day.date()), 'generated': pd.Timestamp.now(tz='Asia/Seoul').strftime('%Y-%m-%d %H:%M KST'),
         'strategy': strat['label'], 'actions': actions or ['변경 없음 (규칙대로 유지)'],
         'targets': {t: round(w, 4) for t, w in total.items() if w > 0.001},
