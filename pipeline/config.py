@@ -14,7 +14,7 @@ STRATEGIES = {
         'trend': {'TQQQ': ('QQQ', 0.40), 'UPRO': ('SPY', 0.40)},
     },
 }
-ACTIVE_STRATEGY = 'presentation'
+ACTIVE_STRATEGY = 'future_d'
 
 SMA_DAYS, BAND, VOL_DAYS = 200, 0.03, 20
 DEFENSIVE = ['GLD', 'IEF', 'TLT', 'DBC', 'CASH']   # CASH = BIL

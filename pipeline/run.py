@@ -220,6 +220,43 @@ def event_notes(events, holdings):
     return exposure
 
 
+def record_events(day, events):
+    """data/events_history.csv에 테마별 관심도를 날짜별로 누적. 급증(1.5배 이상)이면 사건 노트 생성."""
+    path = ROOT / 'data' / 'events_history.csv'
+    path.parent.mkdir(exist_ok=True)
+    hist = pd.read_csv(path) if path.exists() else pd.DataFrame(columns=['date', 'theme', 'ratio'])
+    today = str(day.date())
+    rows = [{'date': today, 'theme': n, 'ratio': round(e['ratio'], 3)} for n, e in events.items() if e['ratio']]
+    if rows:
+        hist = pd.concat([hist[hist['date'] != today], pd.DataFrame(rows)], ignore_index=True)
+        hist.to_csv(path, index=False)
+    new_events = []
+    for n, e in events.items():
+        if e['ratio'] and e['ratio'] >= 1.5:
+            eid = f'{today} {n} 급증'
+            new_events.append({'id': eid, 'date': today, 'theme': n, 'ratio': round(e['ratio'], 2),
+                               'headlines': [h['title'] for h in e['headlines'][:3]]})
+            lines = [f"- 관심도: {e['ratio']:.2f}배 (최근 7일 / 이전 90일)", '- 헤드라인:']
+            lines += [f"  - [{h['title']}]({h['url']}) · {h['domain']}" for h in e['headlines']] or ['  - 없음']
+            body = (f'# {eid}\n\n이슈: {link(n)}\n영향: ' + ' '.join(link(x) for x in e['links']) +
+                    ('\n유사 역사: ' + ' '.join(link(h) for h in e['history']) if e['history'] else '') +
+                    '\n\n## 메모\n(이 사건에 대한 생각을 자유롭게 적으세요. 자동 갱신되지 않습니다.)')
+            write_note(VAULT / '사건' / f'{eid}.md', {'type': '사건', 'date': today, 'tags': '[사건]'}, body, '\n'.join(lines))
+    # 대시보드용: 테마별 최근 기록
+    series = {}
+    for n, g in hist.groupby('theme'):
+        g = g.sort_values('date').tail(60)
+        series[n] = {'d': g['date'].tolist(), 'v': g['ratio'].astype(float).round(3).tolist()}
+    return new_events, series
+
+
+def org_notes():
+    for name, o in S.ORGS.items():
+        rel = '\n'.join(f"- {k}: " + ' '.join(link(x) for x in v) for k, v in o['rel'].items())
+        write_note(VAULT / o['type'] / f'{name}.md', {'type': o['type'], 'tags': f"[{o['type']}]"},
+                   f"# {name}\n\n{o['note']}\n\n## 관계\n{rel}", '- (정적 노드: 관계는 seeds.py에서 관리)')
+
+
 def macro_series(fred):
     idx = pd.date_range(end=pd.Timestamp.today(), periods=120, freq='ME')
     def mon(s):
@@ -273,7 +310,23 @@ def main():
         charts[b] = {'d': [f'{d:%Y-%m-%d}' for d in p.index[tail]], 'p': [round(float(v), 2) for v in p.iloc[tail]],
                      's': [None if pd.isna(v) else round(float(v), 2) for v in sma.iloc[tail]]}
     actions = [c.lstrip('- ') for c in changes] + (['월말: 전체를 목표 비중으로 리밸런싱'] if rebalance else [])
+    # 이슈 관심도 기록 누적 + 급증 사건 노트 생성 (온톨로지가 날마다 자람)
+    new_events, ev_hist = record_events(day, events)
+    org_notes()
+    asset_state = {}
+    for t in S.ASSETS:
+        if t in px:
+            p = px[t]; sma = p.rolling(C.SMA_DAYS).mean()
+            asset_state[t] = {'종가': round(float(p.iloc[-1]), 2), '200일선대비': f'{p.iloc[-1] / sma.iloc[-1] - 1:+.1%}',
+                              '1개월': f'{p.iloc[-1] / p.iloc[-22] - 1:+.1%}'}
+            if t in sleeves:
+                asset_state[t]['신호'] = '보유' if sleeves[t]['on'] else '청산'
+    import graph as G
+    ontology = G.build(strat, total, sleeves, asset_state, events, flags, why, new_events)
+    (ROOT / 'docs').mkdir(exist_ok=True)
+    (ROOT / 'docs' / 'ontology.json').write_text(json.dumps(ontology, ensure_ascii=False, indent=1), encoding='utf-8')
     dashboard.write(ROOT / 'docs' / 'index.html', {
+        'graph': ontology, 'event_history': ev_hist,
         'date': str(day.date()), 'generated': pd.Timestamp.now(tz='Asia/Seoul').strftime('%Y-%m-%d %H:%M KST'),
         'strategy': strat['label'], 'actions': actions or ['변경 없음 (규칙대로 유지)'],
         'targets': {t: round(w, 4) for t, w in total.items() if w > 0.001},
@@ -291,10 +344,6 @@ def main():
                                       'previous': {k: v for k, v in prev.items() if k != 'previous'}},
                                      ensure_ascii=False), encoding='utf-8')
     print(text)
-    token, chat = os.environ.get('TELEGRAM_BOT_TOKEN'), os.environ.get('TELEGRAM_CHAT_ID')
-    if not args.dry_run and token and chat:
-        r = requests.post(f'https://api.telegram.org/bot{token}/sendMessage', data={'chat_id': chat, 'text': text}, timeout=20)
-        print('텔레그램:', 'OK' if r.ok else r.text)
 
 
 if __name__ == '__main__':
