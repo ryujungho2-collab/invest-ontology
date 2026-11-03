@@ -78,7 +78,7 @@ def build():
 
     # 상태 변수 (그 시점에 알 수 있는 값만)
     df['cpi_yoy'] = (df['cpi'] / df['cpi'].shift(12) - 1) * 100
-    df['unrate_gap'] = df['unrate'] - df['unrate'].rolling(12).mean()
+    df['unrate_gap'] = df['unrate'] - df['unrate'].rolling(12, min_periods=9).mean()   # 발표 누락 달 허용
     df['curve'] = df['gs10'] - df['tb3']
     df['credit'] = df['baa'] - df['gs10']
     df['oil_yoy'] = (df['oil'] / df['oil'].shift(12) - 1) * 100

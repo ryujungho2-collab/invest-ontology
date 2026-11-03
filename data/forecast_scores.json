@@ -1,0 +1,54 @@
+{
+ "S&P500": {
+  "months": 610,
+  "brier": 0.1857,
+  "brier_base": 0.1506,
+  "skill": -0.233,
+  "ic": -0.09,
+  "hit": 0.785,
+  "low_n": 25,
+  "low_avg": 16.1,
+  "high_n": 439,
+  "high_avg": 12.3,
+  "all_avg": 13.2
+ },
+ "미국 10년 국채": {
+  "months": 610,
+  "brier": 0.1942,
+  "brier_base": 0.1826,
+  "skill": -0.064,
+  "ic": 0.004,
+  "hit": 0.738,
+  "low_n": 25,
+  "low_avg": 4.8,
+  "high_n": 491,
+  "high_avg": 7.3,
+  "all_avg": 6.7
+ },
+ "금": {
+  "months": 609,
+  "brier": 0.2766,
+  "brier_base": 0.2573,
+  "skill": -0.075,
+  "ic": -0.06,
+  "hit": 0.562,
+  "low_n": 129,
+  "low_avg": 6.5,
+  "high_n": 264,
+  "high_avg": 12.2,
+  "all_avg": 9.1
+ },
+ "원유": {
+  "months": 609,
+  "brier": 0.302,
+  "brier_base": 0.2683,
+  "skill": -0.126,
+  "ic": -0.051,
+  "hit": 0.458,
+  "low_n": 302,
+  "low_avg": 6.4,
+  "high_n": 96,
+  "high_avg": 3.2,
+  "all_avg": 9.5
+ }
+}

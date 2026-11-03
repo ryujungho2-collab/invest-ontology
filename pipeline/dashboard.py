@@ -48,6 +48,14 @@ footer{max-width:1240px;margin:0 auto;padding:4px 16px 32px;color:var(--sub);fon
  <div class="card"><h2>매매 신호 · 200일선 ±3% 밴드</h2><div class="sig" id="sig"></div></div>
 </section>
 
+<section class="tab" id="t-예측">
+ <div class="card s5"><h2>장기 기대수익 · 향후 10년 S&P500</h2><div id="ltbox"></div><div class="chart"><canvas id="ltchart" aria-label="CAPE 기반 10년 예측과 실제"></canvas></div><p class="sub">선: 각 시점에 그때까지의 데이터만으로 낸 예측(파랑)과 실제 10년 연평균 수익(주황).</p></div>
+ <div class="card s7"><h2>단기 유사 국면 · 향후 12개월 <span id="stbadge"></span></h2><p class="sub" id="stnote"></p><table id="sttable"></table></div>
+ <div class="card"><h2>지금과 닮은 과거 · 그 시기 사건</h2><table id="antable"></table></div>
+ <div class="card s6"><h2>채점표 · 1975년 이후 매달 과거 시점 검증</h2><table id="sctable"></table><p class="sub">기술점수 = 1 − (예측 오차 / 기저율 오차). 0보다 크면 '그냥 평균'보다 낫고, 0보다 작으면 못함.</p></div>
+ <div class="card s6"><h2>예측 일지</h2><p class="sub">매일의 예측을 기록하고 12개월 뒤 실제 결과로 채점합니다.</p><div style="max-height:320px;overflow:auto"><table id="logtable"></table></div></div>
+</section>
+
 <section class="tab" id="t-이슈">
  <div class="card s7"><h2>이슈 레이더 · 뉴스 관심도 (최근 7일 / 이전 90일)</h2><div class="chart lg"><canvas id="echart" aria-label="테마별 관심도"></canvas></div></div>
  <div class="card s5"><h2>내 보유 자산의 이슈 노출</h2><table id="expo"></table></div>
@@ -88,10 +96,10 @@ const pct = (v,d=1) => (v>=0?'+':'')+(v*100).toFixed(d)+'%';
 const esc = s => String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 document.getElementById('meta').textContent = `${D.date} 종가 기준 · ${D.strategy} · 생성 ${D.generated}`;
 // 탭
-const TABS=['개요','이슈','거시','온톨로지','역사']; let drawn={};
+const TABS=['개요','예측','이슈','거시','온톨로지','역사']; let drawn={};
 nav.innerHTML = TABS.map(t=>`<button data-t="${t}">${t}</button>`).join('');
 function show(t){document.querySelectorAll('.tab').forEach(s=>s.classList.toggle('on',s.id==='t-'+t));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));
- if(!drawn[t]){drawn[t]=1;({개요:drawOverview,이슈:drawIssues,거시:drawMacro,온톨로지:drawGraph,역사:drawHistory})[t]();} try{localStorage.setItem('tab',t)}catch(e){}}
+ if(!drawn[t]){drawn[t]=1;({개요:drawOverview,예측:drawForecast,이슈:drawIssues,거시:drawMacro,온톨로지:drawGraph,역사:drawHistory})[t]();} try{localStorage.setItem('tab',t)}catch(e){}}
 nav.onclick=e=>{if(e.target.dataset.t)show(e.target.dataset.t)};
 // 개요
 function drawOverview(){
@@ -110,6 +118,22 @@ function drawOverview(){
    {label:s.base,data:c.p,borderColor:css('--accent'),borderWidth:1.6,pointRadius:0},{label:'200일선',data:c.s,borderColor:css('--sub'),borderWidth:1,pointRadius:0},
    {label:'+3%',data:c.s.map(v=>v&&v*1.03),borderColor:css('--ok'),borderDash:[4,4],borderWidth:1,pointRadius:0},{label:'-3%',data:c.s.map(v=>v&&v*0.97),borderColor:css('--hot'),borderDash:[4,4],borderWidth:1,pointRadius:0}]},
    options:{maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{maxTicksLimit:6}}}}});});
+}
+// 예측
+function drawForecast(){
+ const F=D.forecast; if(!F){document.getElementById('t-예측').innerHTML='<div class="card"><p class="sub">예측 데이터 없음</p></div>';return;}
+ const L=F.long, C=F.current, S=F.scores||{};
+ ltbox.innerHTML=`<div class="kpis"><div class="kpi"><span class="sub">기대 연수익(10년)</span><b>${L.expected}%</b><span class="sub">범위 ${L.low}~${L.high}%</span></div>
+  <div class="kpi"><span class="sub">역사적 평균</span><b>${L.hist_avg}%</b><span class="sub">1950년 이후</span></div><div class="kpi"><span class="sub">CAPE (${L.as_of})</span><b>${L.cape}</b><span class="sub">높을수록 장기 수익 낮음</span></div></div>
+  <p><span class="st-on">채점 통과</span> <span class="sub">기술점수 ${L.skill} · 예측-실제 상관 ${L.corr} · ${L.months}개월 검증</span></p>`;
+ new Chart(ltchart,{type:'line',data:{labels:L.series.m,datasets:[{label:'예측',data:L.series.pred,borderColor:css('--accent'),pointRadius:0,borderWidth:1.6},{label:'실제',data:L.series.actual,borderColor:css('--hot'),pointRadius:0,borderWidth:1.6}]},options:{maintainAspectRatio:false,scales:{x:{ticks:{maxTicksLimit:8}}}}});
+ const sp=S['S&P500']||{}; const ok=(sp.skill||-1)>0;
+ stbadge.innerHTML=ok?'<span class="st-on">채점 통과</span>':'<span class="st-off">채점 탈락 · 참고용</span>';
+ stnote.textContent=ok?'':`과거 시점 검증에서 '그냥 평균'보다 못했습니다(S&P500 기술점수 ${sp.skill}). 아래 숫자는 예측이 아니라 '닮은 과거에서 실제로 일어난 일'의 기록으로 읽으세요. 기준월 ${C.as_of}.`;
+ sttable.innerHTML='<tr><th>자산</th><th>상승한 비율</th><th>중간값</th><th>범위(10~90%)</th></tr>'+Object.entries(C.summary).map(([a,s])=>`<tr><td><b>${esc(a)}</b></td><td>${(s.p_up*100).toFixed(0)}%</td><td>${s.median>=0?'+':''}${s.median.toFixed(1)}%</td><td class="sub">${s.p10.toFixed(1)} ~ ${s.p90.toFixed(1)}%</td></tr>`).join('');
+ antable.innerHTML='<tr><th>닮은 달</th><th>거리</th><th>물가</th><th>금리차</th><th>유가 1년</th><th>CAPE(log)</th><th>이후12개월 S&P</th><th>그 시기 사건(±3개월)</th></tr>'+C.analogs.map(a=>`<tr><td><b>${a.month}</b></td><td>${a.dist}</td><td>${a.state['물가상승률']}</td><td>${a.state['장단기 금리차']}</td><td>${a.state['유가 1년 변화']}</td><td>${a.state['밸류에이션(log CAPE)']}</td><td><b>${a.fwd['S&P500']??'-'}%</b></td><td class="sub">${a.events.map(esc).join('<br>')||'-'}</td></tr>`).join('');
+ sctable.innerHTML='<tr><th>자산(12개월)</th><th>기술점수</th><th>예측-실제 순위상관</th><th>방향 적중률</th><th>판정</th></tr>'+Object.entries(S).map(([a,s])=>`<tr><td>${esc(a)}</td><td>${s.skill}</td><td>${s.ic}</td><td>${(s.hit*100).toFixed(0)}%</td><td>${s.skill>0?'<span class="st-on">통과</span>':'<span class="st-off">탈락</span>'}</td></tr>`).join('')+`<tr><td>S&P500 (10년, CAPE)</td><td>${L.skill}</td><td>${L.corr}</td><td>-</td><td>${L.skill>0?'<span class="st-on">통과</span>':'<span class="st-off">탈락</span>'}</td></tr>`;
+ logtable.innerHTML='<tr><th>작성일</th><th>기준월</th><th>자산</th><th>상승확률</th><th>중간값</th><th>실제</th></tr>'+[...(F.log||[])].reverse().map(r=>`<tr><td>${r.made}</td><td>${r.as_of}</td><td>${esc(r.asset)}</td><td>${(r.p_up*100).toFixed(0)}%</td><td>${r.median}%</td><td>${r.actual??'<span class="sub">대기</span>'}</td></tr>`).join('');
 }
 // 이슈
 function drawIssues(){

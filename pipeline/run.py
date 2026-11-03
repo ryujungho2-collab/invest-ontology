@@ -342,12 +342,39 @@ def main():
         chronicle = HL.event_rows(h, ev)
         HL.write_notes(write_note, link, VAULT, chronicle)
         tl = HL.timeline(h, chronicle)
+    # 예측 엔진: 단기 유사국면(참고용) + 장기 밸류에이션(채점 통과) + 채점표 + 예측 일지
+    forecast_data = None
+    if hist_csv.exists():
+        try:
+            import forecast as FC
+            hf = FC.load()
+            fc, lt = FC.current(hf), FC.long_term(hf)
+            score_file = ROOT / 'data' / 'forecast_scores.json'
+            if stale or not score_file.exists():                 # 채점은 무거워서 데이터 갱신 때만
+                score_file.write_text(json.dumps(FC.scorecard(hf), ensure_ascii=False, indent=1), encoding='utf-8')
+            scores = json.loads(score_file.read_text(encoding='utf-8'))
+            flog = FC.log_forecast(fc)
+            forecast_data = {'current': fc, 'long': lt, 'scores': scores,
+                             'log': flog.tail(40).astype(object).where(flog.tail(40).notna(), None).to_dict('records')}
+            ev_names = {f"{r['month']} {r['title']}" for r in chronicle}
+            lines = [f"- 기준월: {fc['as_of']}", f"- 장기(10년) S&P500 기대 연수익: {lt['expected']}% (범위 {lt['low']}~{lt['high']}%, CAPE {lt['cape']}) · 채점 통과(기술점수 {lt['skill']})",
+                     '### 단기(12개월) 유사 국면 · 채점 탈락(참고용)']
+            lines += [f"- {a}: 상승확률 {s['p_up']:.0%}, 중간값 {s['median']:+.1f}%" for a, s in fc['summary'].items()]
+            lines.append('### 닮은 달과 그 시기 사건')
+            for a in fc['analogs']:
+                evs = ' '.join(link(e) if e in ev_names else e for e in a['events'])
+                lines.append(f"- {a['month']} (거리 {a['dist']}) → 이후 12개월 S&P500 {a['fwd']['S&P500']}% {evs}")
+            write_note(VAULT / '예측' / '오늘의 예측.md', {'type': '예측', 'tags': '[예측]'},
+                       '# 오늘의 예측\n\n과거와 닮은 정도로 미래의 확률을 읽는다. 채점에서 실력이 확인된 예측만 믿는다.\n연결: [[거시 국면]]',
+                       '\n'.join(lines))
+        except Exception as e:
+            print(f'예측 엔진 실패: {e}')
     import graph as G
     ontology = G.build(strat, total, sleeves, asset_state, events, flags, why, new_events, chronicle)
     (ROOT / 'docs').mkdir(exist_ok=True)
     (ROOT / 'docs' / 'ontology.json').write_text(json.dumps(ontology, ensure_ascii=False, indent=1), encoding='utf-8')
     dashboard.write(ROOT / 'docs' / 'index.html', {
-        'graph': ontology, 'event_history': ev_hist, 'timeline': tl,
+        'graph': ontology, 'event_history': ev_hist, 'timeline': tl, 'forecast': forecast_data,
         'date': str(day.date()), 'generated': pd.Timestamp.now(tz='Asia/Seoul').strftime('%Y-%m-%d %H:%M KST'),
         'strategy': strat['label'], 'actions': actions or ['변경 없음 (규칙대로 유지)'],
         'targets': {t: round(w, 4) for t, w in total.items() if w > 0.001},
