@@ -289,7 +289,7 @@
    "type": "산업",
    "props": {
     "설명": "분쟁과 각국 국방비 증액의 수혜 산업.",
-    "관심도": 0.8829425495012392,
+    "관심도": 0.9629145327085831,
     "수준": "보통",
     "헤드라인": [
      "‘It’s a War of Attrition’: Drones Give No Military Edge in Sudan - The New York Times",
@@ -315,7 +315,7 @@
     "헤드라인": [
      "Binance customers withdraw $7.4 billion after crypto heist - CBS News",
      "Binance founder Changpeng Zhao addresses historic crypto hack: 'There's no 100% security' - Yahoo Finance",
-     "North Korea denies being behind record $6.3bn Binance hack - BBC"
+     "Bitcoin is breaking a midterm election pattern going back to 2014: Crypto Daily - CoinDesk"
     ]
    }
   },
@@ -541,9 +541,9 @@
     "관심도": 0.6401154057430642,
     "수준": "감소",
     "헤드라인": [
-     "OPEC, Allies Keep Output Steady While Gulf Shipping Remains Under Threat - WSJ",
      "CENTCOM Commander Visits Strait of Hormuz during Milestone Week - US Central Command (.mil)",
-     "Iran says 3 oil tankers hit naval mines, catch fire in Strait of Hormuz - Anadolu Ajansı"
+     "Iran says 3 oil tankers hit naval mines, catch fire in Strait of Hormuz - Anadolu Ajansı",
+     "2026 Iran war | Oil, Explained, United States, Israel, Strait of Hormuz, Map, & Conflict - Britannica"
     ]
    }
   },
@@ -554,7 +554,7 @@
     "관심도": 0.8378568968627516,
     "수준": "보통",
     "헤드라인": [
-     "Gold Futures Slide as Higher Oil Prices Fuel Rate-Hike Concerns - WSJ",
+     "Fed’s Rate Hold Sends Bond Yields in Different Directions - WSJ",
      "Turkey Inflation Quickens Unexpectedly, Clouding Rate Path - Bloomberg.com",
      "South Korea October headline inflation moderates ahead of expected rate hike - Reuters"
     ]
@@ -590,11 +590,11 @@
    "id": "반도체 공급망",
    "type": "이슈",
    "props": {
-    "관심도": 0.8967814217354882,
+    "관심도": 0.9114257782561748,
     "수준": "보통",
     "헤드라인": [
-     "Bosch to create semiconductor division from January 2028 - Reuters",
      "3 semiconductor stocks we approach with caution - Yahoo Finance",
+     "Bosch to create semiconductor division from January 2028 - Reuters",
      "TSMC, Samsung, and SK Hynix: Why This Investment Trust Is Reducing Its AI Exposure - Morningstar"
     ]
    }
@@ -632,9 +632,9 @@
     "관심도": 1.2202603392891462,
     "수준": "증가",
     "헤드라인": [
-     "Live fact check: Election Day 2026 - PBS",
-     "Democrats Show Strength in Final Days of Race for the Senate, New Polls Find - The New York Times",
-     "Florida 2026 Election Results - MultiState"
+     "Live Results: Nebraska Senate midterm election - PBS",
+     "Illinois 2026 Election Results - MultiState",
+     "Investors ready for possible shake-up in Congress as Election Day arrives - Reuters"
     ]
    }
   },
@@ -642,11 +642,11 @@
    "id": "보건·팬데믹",
    "type": "이슈",
    "props": {
-    "관심도": 0.813552979426286,
-    "수준": "보통",
+    "관심도": 0.7916585244767432,
+    "수준": "감소",
     "헤드라인": [
+     "2026 Ebola outbreak in Central Africa - Britannica",
      "Taco Bell sales fall more than expected on cyclosporiasis outbreak hit - Reuters",
-     "DRC Ebola outbreak 'growing exponentially,' UN says - DW.com",
      "Yum Revenue Rises Despite Taco Bell Cyclospora Outbreak Fallout - WSJ"
     ]
    }
@@ -658,9 +658,9 @@
     "관심도": 0.7379702431353575,
     "수준": "감소",
     "헤드라인": [
+     "3.8-magnitude earthquake hits in Alameda County, USGS says - KCRA",
      "Utilities lobby for shield from wildfire costs - Los Angeles Times",
-     "Earthquake of magnitude 2.3 recorded near Cobb, CA on Nov. 3 - Sacramento Bee",
-     "Eyes remain on the Caribbean with new area to watch designated in historically quiet Atlantic - FOX Weather"
+     "Earthquake of magnitude 2.3 recorded near Cobb, CA on Nov. 3 - Sacramento Bee"
     ]
    }
   },
@@ -673,7 +673,7 @@
     "헤드라인": [
      "America's changing power grid faces a powerful El Niño - Axios",
      "320 MW nuclear power plant in US nears construction permit after safety review - Interesting Engineering",
-     "Ranked: The Countries Building the Most Nuclear Power – Visual Capitalist - EnergyNow.com"
+     "Putin offers African leaders military cooperation and nuclear power - National Security News"
     ]
    }
   },
@@ -694,7 +694,7 @@
    "id": "러시아·우크라이나",
    "type": "이슈",
    "props": {
-    "관심도": 0.8892647498645702,
+    "관심도": 0.8897673086926086,
     "수준": "보통",
     "헤드라인": [
      "Russian attack on Ukraine aid hub kills 31 as US announces new peace talks - Al Jazeera",
@@ -725,7 +725,7 @@
     "헤드라인": [
      "US Dollar Index edges up within range with midterm elections front and centre - FXStreet",
      "U.S. Dollar Index (Derivatives) price today, DXY to USD live price, marketcap and chart - CoinMarketCap",
-     "US Dollar Index (DX-Y.NYB) Charts, Data & News - Yahoo Finance - Yahoo! Finance Canada"
+     "Dollar Index consolidates near 101.58 with bearish bias: Live - Investing.com"
     ]
    }
   },
@@ -733,8 +733,8 @@
    "id": "일본·엔캐리",
    "type": "이슈",
    "props": {
-    "관심도": 0.8058615820277912,
-    "수준": "보통",
+    "관심도": 0.7710783557305888,
+    "수준": "감소",
     "헤드라인": [
      "What a Yen Carry Trade Unwind Means for Nasdaq and Nikkei Stocks - StoneX",
      "Bank of Japan signals December rate hike after inflation reaches 2.1% - Equiti Global",
@@ -772,7 +772,7 @@
    "id": "중국 경제",
    "type": "이슈",
    "props": {
-    "관심도": 0.9101721528298417,
+    "관심도": 0.9643631909566278,
     "수준": "보통",
     "헤드라인": [
      "China to raise FX reserve requirement to slow yuan's rally - Reuters",
@@ -811,12 +811,12 @@
    "id": "전기차·배터리",
    "type": "이슈",
    "props": {
-    "관심도": 0.9483361365257438,
+    "관심도": 0.9419497605489319,
     "수준": "보통",
     "헤드라인": [
+     "'Most Companies Are Struggling': Executive Shares An Uncomfortable Truth About Solid-State EV Batteries - InsideEVs",
      "Charlottesville discussing electric vehicle fleet expansion - cbs19news.com",
-     "90% in 14.7 minutes: New EV battery delivers faster charging in tests - Interesting Engineering",
-     "Omar Bolori Sees Surprising Shift in Nigeria’s Electric Vehicle Market. - Bergen Record"
+     "Save Gas, Save Time, Save Money: We Test the Top EV Chargers to Find the Best for Your Home - Car and Driver"
     ]
    }
   },
@@ -824,12 +824,12 @@
    "id": "바이오·비만치료제",
    "type": "이슈",
    "props": {
-    "관심도": 0.8526714029983108,
+    "관심도": 0.8522461101502906,
     "수준": "보통",
     "헤드라인": [
      "Pfizer pares back obesity pipeline, drops phase 2-stage lung disease candidate - Fierce Biotech",
-     "Neuralink’s China Rival Targets Obesity With ‘Electronic’ GLP-1 - Bloomberg.com",
-     "LG Chem's obesity drug deal with Rhythm grows to $855 million - Korea Biomedical Review"
+     "Teen shares the impact taking a GLP-1 drug has on his daily life - ABC News - Breaking News, Latest News and Videos",
+     "Neuralink’s China Rival Targets Obesity With ‘Electronic’ GLP-1 - Bloomberg.com"
     ]
    }
   },
@@ -854,8 +854,8 @@
     "수준": "보통",
     "헤드라인": [
      "Supermarket fridges hit with cyberattacks across Europe — here's what's happening - CNBC",
-     "Synology NAS Devices Targeted in Ransomware Attacks Exploiting Patched DSM Flaw - The Hacker News",
-     "North Korea denies being behind record $6.3bn Binance hack - BBC"
+     "Binance founder Changpeng Zhao addresses historic crypto hack: 'There's no 100% security' - Yahoo Finance",
+     "Synology NAS Devices Targeted in Ransomware Attacks Exploiting Patched DSM Flaw - The Hacker News"
     ]
    }
   },
@@ -866,9 +866,9 @@
     "관심도": 0.8824622573051805,
     "수준": "보통",
     "헤드라인": [
+     "Employers Near Deal to Delay Strike Threat at Los Angeles-Long Beach Ports - WSJ",
      "175 CT-based workers at aerospace manufacturer Triumph go on strike - CT Insider",
-     "Morton salt mine, more Ohio layoffs, closures affect over 420 workers - Cincinnati Enquirer",
-     "News Fears a strike at San Pedro Bay ports could see congestion - The Loadstar"
+     "Morton salt mine, more Ohio layoffs, closures affect over 420 workers - Cincinnati Enquirer"
     ]
    }
   },
@@ -907,7 +907,7 @@
     "헤드라인": [
      "Binance customers withdraw $7.4 billion after crypto heist - CBS News",
      "Binance founder Changpeng Zhao addresses historic crypto hack: 'There's no 100% security' - Yahoo Finance",
-     "North Korea denies being behind record $6.3bn Binance hack - BBC"
+     "Bitcoin is breaking a midterm election pattern going back to 2014: Crypto Daily - CoinDesk"
     ]
    }
   }
@@ -2048,22 +2048,6 @@
    "text": "한반도·북한 —영향→ 한국 ←소재— 삼성전자 —산업→ 반도체 ←노출— TQQQ"
   },
   {
-   "theme": "한반도·북한",
-   "ratio": 1.2458900013746066,
-   "level": "증가",
-   "asset": "UPRO",
-   "hops": 4,
-   "text": "한반도·북한 —영향→ 한국 ←영향— 선거·정치 —영향→ 미국 ←노출— UPRO"
-  },
-  {
-   "theme": "한반도·북한",
-   "ratio": 1.2458900013746066,
-   "level": "증가",
-   "asset": "IEF",
-   "hops": 4,
-   "text": "한반도·북한 —영향→ 한국 ←영향— 선거·정치 —영향→ 미국 ←노출— IEF"
-  },
-  {
    "theme": "선거·정치",
    "ratio": 1.2202603392891462,
    "level": "증가",
@@ -2125,7 +2109,7 @@
    "level": "보통",
    "asset": "UPRO",
    "hops": 4,
-   "text": "AI·기술 —영향→ 빅테크 ←노출— TECL —노출→ 미국 ←노출— UPRO"
+   "text": "AI·기술 —영향→ 빅테크 ←산업— 엔비디아 —소재→ 미국 ←노출— UPRO"
   },
   {
    "theme": "AI·기술",
@@ -2133,7 +2117,7 @@
    "level": "보통",
    "asset": "IEF",
    "hops": 4,
-   "text": "AI·기술 —영향→ 빅테크 ←노출— TECL —노출→ 미국 ←노출— IEF"
+   "text": "AI·기술 —영향→ 빅테크 ←산업— 엔비디아 —소재→ 미국 ←노출— IEF"
   },
   {
    "theme": "분쟁·전쟁",
@@ -2144,68 +2128,28 @@
    "text": "분쟁·전쟁 —영향→ 금 ←노출— GLD"
   },
   {
-   "theme": "분쟁·전쟁",
-   "ratio": 0.9993673107119163,
-   "level": "보통",
-   "asset": "TQQQ",
-   "hops": 4,
-   "text": "분쟁·전쟁 —영향→ 원유 ←영향— 인플레이션 —영향→ 금리 ←노출— TQQQ"
-  },
-  {
-   "theme": "분쟁·전쟁",
-   "ratio": 0.9993673107119163,
-   "level": "보통",
-   "asset": "UPRO",
-   "hops": 4,
-   "text": "분쟁·전쟁 —영향→ 원유 ←영향— 인플레이션 —영향→ 금리 ←노출— UPRO"
-  },
-  {
-   "theme": "전기차·배터리",
-   "ratio": 0.9483361365257438,
-   "level": "보통",
-   "asset": "TQQQ",
-   "hops": 4,
-   "text": "전기차·배터리 —영향→ 구리 ←영향— AI·기술 —영향→ 빅테크 ←노출— TQQQ"
-  },
-  {
-   "theme": "전기차·배터리",
-   "ratio": 0.9483361365257438,
-   "level": "보통",
-   "asset": "UPRO",
-   "hops": 4,
-   "text": "전기차·배터리 —영향→ 중국 ←노출— SOXL —노출→ 미국 ←노출— UPRO"
-  },
-  {
-   "theme": "전기차·배터리",
-   "ratio": 0.9483361365257438,
-   "level": "보통",
-   "asset": "IEF",
-   "hops": 4,
-   "text": "전기차·배터리 —영향→ 중국 ←노출— SOXL —노출→ 미국 ←노출— IEF"
-  },
-  {
-   "theme": "에너지 전환·전력",
-   "ratio": 0.9290503379441757,
+   "theme": "방산",
+   "ratio": 0.9629145327085831,
    "level": "보통",
    "asset": "TQQQ",
    "hops": 2,
-   "text": "에너지 전환·전력 —영향→ 빅테크 ←노출— TQQQ"
+   "text": "방산 —영향→ 미국 ←노출— TQQQ"
   },
   {
-   "theme": "에너지 전환·전력",
-   "ratio": 0.9290503379441757,
+   "theme": "방산",
+   "ratio": 0.9629145327085831,
    "level": "보통",
    "asset": "UPRO",
-   "hops": 4,
-   "text": "에너지 전환·전력 —영향→ 빅테크 ←노출— TECL —노출→ 미국 ←노출— UPRO"
+   "hops": 2,
+   "text": "방산 —영향→ 미국 ←노출— UPRO"
   },
   {
-   "theme": "에너지 전환·전력",
-   "ratio": 0.9290503379441757,
+   "theme": "방산",
+   "ratio": 0.9629145327085831,
    "level": "보통",
    "asset": "IEF",
-   "hops": 4,
-   "text": "에너지 전환·전력 —영향→ 빅테크 ←노출— TECL —노출→ 미국 ←노출— IEF"
+   "hops": 2,
+   "text": "방산 —영향→ 미국 ←노출— IEF"
   }
  ]
 }
