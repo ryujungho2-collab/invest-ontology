@@ -324,7 +324,11 @@ def main():
     # 하이브리드 역사: 금융 데이터(주 1회 갱신) × 시대 연표
     import history_link as HL
     hist_csv = ROOT / 'data' / 'history_monthly.csv'
-    stale = (not hist_csv.exists()) or (pd.Timestamp.now() - pd.Timestamp(hist_csv.stat().st_mtime, unit='s')).days >= 7
+    # 파일 수정 시각은 클라우드에서 매번 바뀌므로, 데이터의 마지막 달로 판단 (지난달까지 없으면 갱신)
+    stale = True
+    if hist_csv.exists():
+        last = pd.read_csv(hist_csv, usecols=['month'])['month'].iloc[-1]
+        stale = pd.Period(last, 'M') < pd.Timestamp.today().to_period('M') - 1
     if stale:
         try:
             import history_data
