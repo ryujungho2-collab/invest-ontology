@@ -288,7 +288,14 @@
    "id": "방산",
    "type": "산업",
    "props": {
-    "설명": "분쟁과 각국 국방비 증액의 수혜 산업."
+    "설명": "분쟁과 각국 국방비 증액의 수혜 산업.",
+    "관심도": 0.8829425495012392,
+    "수준": "보통",
+    "헤드라인": [
+     "‘It’s a War of Attrition’: Drones Give No Military Edge in Sudan - The New York Times",
+     "Ukrainian long-range drone strikes operations hit at least 30 Russian military targets in October - Gwara Media",
+     "War widens in the Black Sea in a test of NATO red lines - Reuters"
+    ]
    }
   },
   {
@@ -302,7 +309,14 @@
    "id": "암호화폐",
    "type": "요인",
    "props": {
-    "설명": "비트코인·스테이블코인. 유동성과 위험선호를 보여주는 고변동 자산."
+    "설명": "비트코인·스테이블코인. 유동성과 위험선호를 보여주는 고변동 자산.",
+    "관심도": 1.5891868633903652,
+    "수준": "급증",
+    "헤드라인": [
+     "Binance customers withdraw $7.4 billion after crypto heist - CBS News",
+     "Binance founder Changpeng Zhao addresses historic crypto hack: 'There's no 100% security' - Yahoo Finance",
+     "North Korea denies being behind record $6.3bn Binance hack - BBC"
+    ]
    }
   },
   {
@@ -492,6 +506,409 @@
     "설명": "미국 물가 9%대, 연준 급격한 금리 인상. S&P500 -18%, 나스닥 -33%, 장기국채 큰 손실. 원자재만 상승.",
     "오늘과닮음": true,
     "이유": "거시 국면 고물가"
+   }
+  },
+  {
+   "id": "무역·관세",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.813496020848082,
+    "수준": "보통",
+    "헤드라인": [
+     "Wall Street is bracing for a fresh wave of tariffs, Iran action (and potentially a government shutdown) after the midterms - Fortune",
+     "Section 338 Tariffs on Canada Put Congress at a Crossroads - Legis1",
+     "War, tariffs and China: What the US midterms mean for the Asia-Pacific - Al Jazeera"
+    ]
+   }
+  },
+  {
+   "id": "분쟁·전쟁",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.9993673107119163,
+    "수준": "보통",
+    "헤드라인": [
+     "Exclusive | U.S. Strikes Iran’s Qeshm Island as Trump Talks Down War Risks - WSJ",
+     "Russian strikes on Ukrainian aid site kill at least 31 people, with dozens still missing - PBS",
+     "Death toll hits 29 after Russian strike on Ukrainian aid site, with 48 still missing - NPR"
+    ]
+   }
+  },
+  {
+   "id": "중동·에너지",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.6401154057430642,
+    "수준": "감소",
+    "헤드라인": [
+     "OPEC, Allies Keep Output Steady While Gulf Shipping Remains Under Threat - WSJ",
+     "CENTCOM Commander Visits Strait of Hormuz during Milestone Week - US Central Command (.mil)",
+     "Iran says 3 oil tankers hit naval mines, catch fire in Strait of Hormuz - Anadolu Ajansı"
+    ]
+   }
+  },
+  {
+   "id": "중앙은행·금리",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.851198981997395,
+    "수준": "보통",
+    "헤드라인": [
+     "Fed’s Rate Hold Sends Bond Yields in Different Directions - WSJ",
+     "For Avelima’s family, every RBA rate hike means more shifts, a stretched budget – and less time together - The Guardian",
+     "Turkey Inflation Quickens Unexpectedly, Clouding Rate Path - Bloomberg.com"
+    ]
+   }
+  },
+  {
+   "id": "인플레이션",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.871745583915298,
+    "수준": "보통",
+    "헤드라인": [
+     "Health Insurance Is the Sleeper Inflation Issue - WSJ",
+     "Opinion | The inflation election - The Washington Post",
+     "Australia hikes rates to 18-year high to fight inflation - CNBC"
+    ]
+   }
+  },
+  {
+   "id": "AI·기술",
+   "type": "이슈",
+   "props": {
+    "관심도": 1.0293560293397532,
+    "수준": "보통",
+    "헤드라인": [
+     "Hamburg Town Board approves data center moratorium - Spectrum News",
+     "How the fate of a Michigan data center hinges on Anthropic’s mega IPO - Crain's Detroit",
+     "NEWSLETTER: Data center opposition hits the ballot box - Reuters"
+    ]
+   }
+  },
+  {
+   "id": "반도체 공급망",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8967814217354882,
+    "수준": "보통",
+    "헤드라인": [
+     "3 semiconductor stocks we approach with caution - Yahoo Finance",
+     "Bosch to create semiconductor division from January 2028 - Reuters",
+     "TSMC Is Down 18%: The 2nm Ramp Should Change That (NYSE:TSM) - Seeking Alpha"
+    ]
+   }
+  },
+  {
+   "id": "대만·중국 긴장",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8894375343715994,
+    "수준": "보통",
+    "헤드라인": [
+     "China military vice chair meets Russian defence minister in Beijing - Reuters",
+     "The emerging shape of China’s military reach in SE Asia - Asia Times",
+     "Falling Edifice: The Decay of the Nash Equilibrium in the Taiwan Strait - Taiwan Insight"
+    ]
+   }
+  },
+  {
+   "id": "금융 불안",
+   "type": "이슈",
+   "props": {
+    "관심도": 1.0423142358240165,
+    "수준": "보통",
+    "헤드라인": [
+     "Paraguay Bank Failure - Post Register",
+     "Paraguay Bank Failure - WV News",
+     "Paraguay Bank Failure - Goshen News"
+    ]
+   }
+  },
+  {
+   "id": "선거·정치",
+   "type": "이슈",
+   "props": {
+    "관심도": 1.2202603392891462,
+    "수준": "증가",
+    "헤드라인": [
+     "Live fact check: Election Day 2026 - PBS",
+     "Democrats Show Strength in Final Days of Race for the Senate, New Polls Find - The New York Times",
+     "Texas 2026 Election Results - MultiState"
+    ]
+   }
+  },
+  {
+   "id": "보건·팬데믹",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8722798919255378,
+    "수준": "보통",
+    "헤드라인": [
+     "Yum Revenue Rises Despite Taco Bell Cyclospora Outbreak Fallout - WSJ",
+     "Taco Bell sales fall more than expected on cyclosporiasis outbreak hit - Reuters",
+     "Epidemic and emerging disease alerts in the Pacific as of 03 November 2026 - ReliefWeb"
+    ]
+   }
+  },
+  {
+   "id": "기후·재해",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.7379702431353575,
+    "수준": "감소",
+    "헤드라인": [
+     "Hurricane Center watching system off coast of Florida. Possible impacts? - Naples Daily News",
+     "Utilities lobby for shield from wildfire costs - Los Angeles Times",
+     "Eyes remain on the Caribbean with new area to watch designated in historically quiet Atlantic - FOX Weather"
+    ]
+   }
+  },
+  {
+   "id": "에너지 전환·전력",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.9290503379441757,
+    "수준": "보통",
+    "헤드라인": [
+     "America's changing power grid faces a powerful El Niño - Axios",
+     "320 MW nuclear power plant in US nears construction permit after safety review - Interesting Engineering",
+     "Ranked: The Countries Building the Most Nuclear Power – Visual Capitalist - EnergyNow.com"
+    ]
+   }
+  },
+  {
+   "id": "제재·탈달러",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.6251101787540105,
+    "수준": "감소",
+    "헤드라인": [
+     "What Sanctions Get Right - Foreign Affairs",
+     "Central Banks Accelerated Gold Buying in Third Quarter - WSJ",
+     "Justice Department urges sanctions for database analysis critical of its noncitizen voting claims - PBS"
+    ]
+   }
+  },
+  {
+   "id": "러시아·우크라이나",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8804063734603511,
+    "수준": "보통",
+    "헤드라인": [
+     "Russian attack on Ukraine aid hub kills 31 as US announces new peace talks - Al Jazeera",
+     "Exclusive | U.S. Pushes to Restore Russian Gas Sales to Europe Via Ukraine - WSJ",
+     "Russian Offensive Campaign Assessment, November 2, 2026 - Institute for the Study of War"
+    ]
+   }
+  },
+  {
+   "id": "한반도·북한",
+   "type": "이슈",
+   "props": {
+    "관심도": 1.2458900013746066,
+    "수준": "증가",
+    "헤드라인": [
+     "North Korea conducts strategic cruise missile test with dispersal warhead, KCNA says - Reuters",
+     "North Korea’s Missiles Are Quietly Getting Cluster Warheads—Russia’s Fingerprints May Be All Over It - UNITED24 Media",
+     "North Korea claims cruise missile warhead can devastate 15-acre area - Stars and Stripes"
+    ]
+   }
+  },
+  {
+   "id": "달러·환율",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.9074036918138042,
+    "수준": "보통",
+    "헤드라인": [
+     "US Dollar Index edges up within range with midterm elections front and centre - FXStreet",
+     "U.S. Dollar Index (Derivatives) price today, DXY to USD live price, marketcap and chart - CoinMarketCap",
+     "US Dollar Index (DX-Y.NYB) Charts, Data & News - Yahoo Finance - Yahoo! Finance Canada"
+    ]
+   }
+  },
+  {
+   "id": "일본·엔캐리",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8216049052751525,
+    "수준": "보통",
+    "헤드라인": [
+     "What a Yen Carry Trade Unwind Means for Nasdaq and Nikkei Stocks - StoneX",
+     "Bank of Japan signals December rate hike after inflation reaches 2.1% - Equiti Global",
+     "Bank of Japan (8301.T) Seasonal returns chart - Yahoo Finance UK"
+    ]
+   }
+  },
+  {
+   "id": "미국 부채·재정",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.4782001457371872,
+    "수준": "감소",
+    "헤드라인": [
+     "Treasury, European Government Bond Yields Rise as Markets Await U.S. Midterm Election Results - WSJ",
+     "Treasury yields rise as investors weigh midterm vote, jobs data and Iran tensions - CNBC",
+     "Treasury Yields Extend Past Month’s Slide as Oil Prices Tumble - Bloomberg"
+    ]
+   }
+  },
+  {
+   "id": "부동산",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.5346650998824912,
+    "수준": "감소",
+    "헤드라인": [
+     "Mortgage Rates Today, November 3, 2026: 30-Year Rates Drop to 7.26% - WSJ",
+     "Mortgage Payments Soar, Locking Many Out Of Housing Market - Honolulu Civil Beat",
+     "Current New Jersey Mortgage And Refinance Rates - Forbes"
+    ]
+   }
+  },
+  {
+   "id": "중국 경제",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.9120121436155193,
+    "수준": "보통",
+    "헤드라인": [
+     "China’s Central Bank Tweaks Forex Reserve Rules to Steady Yuan - WSJ",
+     "China to raise FX reserve requirement to slow yuan's rally - Reuters",
+     "China Steps in to Boost Stocks, Cool Off Yuan - Bloomberg.com"
+    ]
+   }
+  },
+  {
+   "id": "핵심 광물",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8962151920090325,
+    "수준": "보통",
+    "헤드라인": [
+     "Lithium Miners Look Past Falling Prices to Expand Output - WSJ",
+     "Old magnets, new tricks: Europe’s push to cut reliance on rare earths - projects.research-and-innovation.ec.europa.eu",
+     "Rio Tinto expands lithium production in Argentina - electrive.com"
+    ]
+   }
+  },
+  {
+   "id": "식량·농산물",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8740543469585781,
+    "수준": "보통",
+    "헤드라인": [
+     "Unpacking wheat's water use for drought research - Phys.org",
+     "The National Wheat Yield Contest Announces 2026 Winners - American Ag Network",
+     "Baker Valley farmer Jess Blatchford awarded in national wheat crop contest - Baker City Herald"
+    ]
+   }
+  },
+  {
+   "id": "전기차·배터리",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.9419497605489319,
+    "수준": "보통",
+    "헤드라인": [
+     "'Most Companies Are Struggling': Executive Shares An Uncomfortable Truth About Solid-State EV Batteries - InsideEVs",
+     "Toyota Electric Vehicle Sales Jump 127 Percent Despite China Slump - Fuel Cells Works",
+     "Charlottesville discussing electric vehicle fleet expansion - cbs19news.com"
+    ]
+   }
+  },
+  {
+   "id": "바이오·비만치료제",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8579455756829797,
+    "수준": "보통",
+    "헤드라인": [
+     "Pfizer pares back obesity pipeline, drops phase 2-stage lung disease candidate - Fierce Biotech",
+     "Teen shares the impact taking a GLP-1 drug has on his daily life - ABC News - Breaking News, Latest News and Videos",
+     "Neuralink’s China Rival Targets Obesity With ‘Electronic’ GLP-1 - Bloomberg.com"
+    ]
+   }
+  },
+  {
+   "id": "양자·로봇",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8220145194591835,
+    "수준": "보통",
+    "헤드라인": [
+     "Experiment Supports Theoretical Path to Topological Quantum Computing - The Quantum Insider",
+     "IonQ vs. Rigetti Computing: Which Is the Better Quantum Computing Stock to Own for the Next 5 Years - The Motley Fool",
+     "Alice & Bob Demonstrates Multi-Hour Physical Bit-Flip Suppression on Single-Cat and Helium 2 Processors - Quantum Computing Report"
+    ]
+   }
+  },
+  {
+   "id": "사이버보안",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8385619464563117,
+    "수준": "보통",
+    "헤드라인": [
+     "Supermarket fridges hit with cyberattacks across Europe — here's what's happening - CNBC",
+     "Binance founder Changpeng Zhao addresses historic crypto hack: 'There's no 100% security' - Yahoo Finance",
+     "Synology NAS Devices Targeted in Ransomware Attacks Exploiting Patched DSM Flaw - The Hacker News"
+    ]
+   }
+  },
+  {
+   "id": "고용·노동",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8932893581934728,
+    "수준": "보통",
+    "헤드라인": [
+     "175 CT-based workers at aerospace manufacturer Triumph go on strike - CT Insider",
+     "Bangladeshi Garment Workers’ Strike Demands End to Poverty Wages - Democracy Now!",
+     "Morton salt mine, more Ohio layoffs, closures affect over 420 workers - Cincinnati Enquirer"
+    ]
+   }
+  },
+  {
+   "id": "빅테크 규제",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8180507006139761,
+    "수준": "보통",
+    "헤드라인": [
+     "Meta Faces U.K. Antitrust Probe Over Publisher Content Terms - WSJ",
+     "What the midterm elections mean for the economy and investors - TradingView",
+     "The campaigns centering Big Tech - Politico"
+    ]
+   }
+  },
+  {
+   "id": "인구·고령화",
+   "type": "이슈",
+   "props": {
+    "관심도": 0.8521168816755366,
+    "수준": "보통",
+    "헤드라인": [
+     "Italy Birth Rate 2025: Fertility Falls to 1.14, Births Down 3.8% | Istat Data - News and Statistics - IndexBox",
+     "Robert Krol: Aging population complicates monetary policy (Opinion) - Charleston Gazette-Mail",
+     "Greece’s Birth Rate Falls to Postwar Low - GreekReporter.com"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-02 암호화폐 급증",
+   "type": "사건",
+   "props": {
+    "날짜": "2026-11-02",
+    "관심도": 1.59,
+    "헤드라인": [
+     "Binance customers withdraw $7.4 billion after crypto heist - CBS News",
+     "Binance founder Changpeng Zhao addresses historic crypto hack: 'There's no 100% security' - Yahoo Finance",
+     "North Korea denies being behind record $6.3bn Binance hack - BBC"
+    ]
    }
   },
   {
@@ -2612,6 +3029,556 @@
    "rel": "국면"
   },
   {
+   "source": "무역·관세",
+   "target": "미국",
+   "rel": "영향"
+  },
+  {
+   "source": "무역·관세",
+   "target": "중국",
+   "rel": "영향"
+  },
+  {
+   "source": "무역·관세",
+   "target": "반도체",
+   "rel": "영향"
+  },
+  {
+   "source": "무역·관세",
+   "target": "달러",
+   "rel": "영향"
+  },
+  {
+   "source": "무역·관세",
+   "target": "1930 스무트-홀리 관세",
+   "rel": "유사"
+  },
+  {
+   "source": "분쟁·전쟁",
+   "target": "중동",
+   "rel": "영향"
+  },
+  {
+   "source": "분쟁·전쟁",
+   "target": "러시아",
+   "rel": "영향"
+  },
+  {
+   "source": "분쟁·전쟁",
+   "target": "원유",
+   "rel": "영향"
+  },
+  {
+   "source": "분쟁·전쟁",
+   "target": "금",
+   "rel": "영향"
+  },
+  {
+   "source": "분쟁·전쟁",
+   "target": "1990 걸프전",
+   "rel": "유사"
+  },
+  {
+   "source": "분쟁·전쟁",
+   "target": "1973 1차 오일쇼크",
+   "rel": "유사"
+  },
+  {
+   "source": "중동·에너지",
+   "target": "원유",
+   "rel": "영향"
+  },
+  {
+   "source": "중동·에너지",
+   "target": "중동",
+   "rel": "영향"
+  },
+  {
+   "source": "중동·에너지",
+   "target": "1973 1차 오일쇼크",
+   "rel": "유사"
+  },
+  {
+   "source": "중동·에너지",
+   "target": "1979 2차 오일쇼크와 볼커",
+   "rel": "유사"
+  },
+  {
+   "source": "중앙은행·금리",
+   "target": "금리",
+   "rel": "영향"
+  },
+  {
+   "source": "중앙은행·금리",
+   "target": "달러",
+   "rel": "영향"
+  },
+  {
+   "source": "중앙은행·금리",
+   "target": "미국",
+   "rel": "영향"
+  },
+  {
+   "source": "중앙은행·금리",
+   "target": "1979 2차 오일쇼크와 볼커",
+   "rel": "유사"
+  },
+  {
+   "source": "중앙은행·금리",
+   "target": "2022 인플레이션 긴축",
+   "rel": "유사"
+  },
+  {
+   "source": "인플레이션",
+   "target": "금리",
+   "rel": "영향"
+  },
+  {
+   "source": "인플레이션",
+   "target": "금",
+   "rel": "영향"
+  },
+  {
+   "source": "인플레이션",
+   "target": "원유",
+   "rel": "영향"
+  },
+  {
+   "source": "인플레이션",
+   "target": "1973 1차 오일쇼크",
+   "rel": "유사"
+  },
+  {
+   "source": "인플레이션",
+   "target": "2022 인플레이션 긴축",
+   "rel": "유사"
+  },
+  {
+   "source": "AI·기술",
+   "target": "빅테크",
+   "rel": "영향"
+  },
+  {
+   "source": "AI·기술",
+   "target": "반도체",
+   "rel": "영향"
+  },
+  {
+   "source": "AI·기술",
+   "target": "구리",
+   "rel": "영향"
+  },
+  {
+   "source": "AI·기술",
+   "target": "1995 인터넷 붐",
+   "rel": "유사"
+  },
+  {
+   "source": "AI·기술",
+   "target": "2000 닷컴 붕괴",
+   "rel": "유사"
+  },
+  {
+   "source": "반도체 공급망",
+   "target": "반도체",
+   "rel": "영향"
+  },
+  {
+   "source": "반도체 공급망",
+   "target": "대만",
+   "rel": "영향"
+  },
+  {
+   "source": "반도체 공급망",
+   "target": "한국",
+   "rel": "영향"
+  },
+  {
+   "source": "대만·중국 긴장",
+   "target": "대만",
+   "rel": "영향"
+  },
+  {
+   "source": "대만·중국 긴장",
+   "target": "중국",
+   "rel": "영향"
+  },
+  {
+   "source": "대만·중국 긴장",
+   "target": "반도체",
+   "rel": "영향"
+  },
+  {
+   "source": "금융 불안",
+   "target": "금리",
+   "rel": "영향"
+  },
+  {
+   "source": "금융 불안",
+   "target": "미국",
+   "rel": "영향"
+  },
+  {
+   "source": "금융 불안",
+   "target": "금",
+   "rel": "영향"
+  },
+  {
+   "source": "금융 불안",
+   "target": "2008 글로벌 금융위기",
+   "rel": "유사"
+  },
+  {
+   "source": "선거·정치",
+   "target": "미국",
+   "rel": "영향"
+  },
+  {
+   "source": "선거·정치",
+   "target": "한국",
+   "rel": "영향"
+  },
+  {
+   "source": "보건·팬데믹",
+   "target": "미국",
+   "rel": "영향"
+  },
+  {
+   "source": "보건·팬데믹",
+   "target": "원유",
+   "rel": "영향"
+  },
+  {
+   "source": "보건·팬데믹",
+   "target": "2020 코로나 폭락",
+   "rel": "유사"
+  },
+  {
+   "source": "기후·재해",
+   "target": "원유",
+   "rel": "영향"
+  },
+  {
+   "source": "기후·재해",
+   "target": "구리",
+   "rel": "영향"
+  },
+  {
+   "source": "에너지 전환·전력",
+   "target": "구리",
+   "rel": "영향"
+  },
+  {
+   "source": "에너지 전환·전력",
+   "target": "빅테크",
+   "rel": "영향"
+  },
+  {
+   "source": "제재·탈달러",
+   "target": "러시아",
+   "rel": "영향"
+  },
+  {
+   "source": "제재·탈달러",
+   "target": "금",
+   "rel": "영향"
+  },
+  {
+   "source": "제재·탈달러",
+   "target": "달러",
+   "rel": "영향"
+  },
+  {
+   "source": "제재·탈달러",
+   "target": "1971 닉슨 쇼크",
+   "rel": "유사"
+  },
+  {
+   "source": "러시아·우크라이나",
+   "target": "러시아",
+   "rel": "영향"
+  },
+  {
+   "source": "러시아·우크라이나",
+   "target": "유럽",
+   "rel": "영향"
+  },
+  {
+   "source": "러시아·우크라이나",
+   "target": "원유",
+   "rel": "영향"
+  },
+  {
+   "source": "러시아·우크라이나",
+   "target": "식량",
+   "rel": "영향"
+  },
+  {
+   "source": "러시아·우크라이나",
+   "target": "2022 인플레이션 긴축",
+   "rel": "유사"
+  },
+  {
+   "source": "한반도·북한",
+   "target": "북한",
+   "rel": "영향"
+  },
+  {
+   "source": "한반도·북한",
+   "target": "한국",
+   "rel": "영향"
+  },
+  {
+   "source": "달러·환율",
+   "target": "달러",
+   "rel": "영향"
+  },
+  {
+   "source": "달러·환율",
+   "target": "한국",
+   "rel": "영향"
+  },
+  {
+   "source": "달러·환율",
+   "target": "1985 플라자 합의",
+   "rel": "유사"
+  },
+  {
+   "source": "일본·엔캐리",
+   "target": "일본",
+   "rel": "영향"
+  },
+  {
+   "source": "일본·엔캐리",
+   "target": "금리",
+   "rel": "영향"
+  },
+  {
+   "source": "일본·엔캐리",
+   "target": "달러",
+   "rel": "영향"
+  },
+  {
+   "source": "일본·엔캐리",
+   "target": "1990 일본 버블 붕괴",
+   "rel": "유사"
+  },
+  {
+   "source": "미국 부채·재정",
+   "target": "미국",
+   "rel": "영향"
+  },
+  {
+   "source": "미국 부채·재정",
+   "target": "금리",
+   "rel": "영향"
+  },
+  {
+   "source": "미국 부채·재정",
+   "target": "금",
+   "rel": "영향"
+  },
+  {
+   "source": "미국 부채·재정",
+   "target": "달러",
+   "rel": "영향"
+  },
+  {
+   "source": "미국 부채·재정",
+   "target": "1971 닉슨 쇼크",
+   "rel": "유사"
+  },
+  {
+   "source": "부동산",
+   "target": "금리",
+   "rel": "영향"
+  },
+  {
+   "source": "부동산",
+   "target": "미국",
+   "rel": "영향"
+  },
+  {
+   "source": "부동산",
+   "target": "중국",
+   "rel": "영향"
+  },
+  {
+   "source": "부동산",
+   "target": "2008 글로벌 금융위기",
+   "rel": "유사"
+  },
+  {
+   "source": "부동산",
+   "target": "1990 일본 버블 붕괴",
+   "rel": "유사"
+  },
+  {
+   "source": "암호화폐",
+   "target": "암호화폐",
+   "rel": "영향"
+  },
+  {
+   "source": "암호화폐",
+   "target": "달러",
+   "rel": "영향"
+  },
+  {
+   "source": "중국 경제",
+   "target": "중국",
+   "rel": "영향"
+  },
+  {
+   "source": "중국 경제",
+   "target": "구리",
+   "rel": "영향"
+  },
+  {
+   "source": "중국 경제",
+   "target": "원유",
+   "rel": "영향"
+  },
+  {
+   "source": "중국 경제",
+   "target": "1990 일본 버블 붕괴",
+   "rel": "유사"
+  },
+  {
+   "source": "핵심 광물",
+   "target": "구리",
+   "rel": "영향"
+  },
+  {
+   "source": "핵심 광물",
+   "target": "중국",
+   "rel": "영향"
+  },
+  {
+   "source": "식량·농산물",
+   "target": "식량",
+   "rel": "영향"
+  },
+  {
+   "source": "식량·농산물",
+   "target": "러시아",
+   "rel": "영향"
+  },
+  {
+   "source": "전기차·배터리",
+   "target": "구리",
+   "rel": "영향"
+  },
+  {
+   "source": "전기차·배터리",
+   "target": "중국",
+   "rel": "영향"
+  },
+  {
+   "source": "전기차·배터리",
+   "target": "한국",
+   "rel": "영향"
+  },
+  {
+   "source": "바이오·비만치료제",
+   "target": "헬스케어",
+   "rel": "영향"
+  },
+  {
+   "source": "바이오·비만치료제",
+   "target": "미국",
+   "rel": "영향"
+  },
+  {
+   "source": "양자·로봇",
+   "target": "빅테크",
+   "rel": "영향"
+  },
+  {
+   "source": "양자·로봇",
+   "target": "반도체",
+   "rel": "영향"
+  },
+  {
+   "source": "양자·로봇",
+   "target": "1995 인터넷 붐",
+   "rel": "유사"
+  },
+  {
+   "source": "사이버보안",
+   "target": "빅테크",
+   "rel": "영향"
+  },
+  {
+   "source": "사이버보안",
+   "target": "미국",
+   "rel": "영향"
+  },
+  {
+   "source": "방산",
+   "target": "방산",
+   "rel": "영향"
+  },
+  {
+   "source": "방산",
+   "target": "미국",
+   "rel": "영향"
+  },
+  {
+   "source": "방산",
+   "target": "유럽",
+   "rel": "영향"
+  },
+  {
+   "source": "고용·노동",
+   "target": "미국",
+   "rel": "영향"
+  },
+  {
+   "source": "고용·노동",
+   "target": "금리",
+   "rel": "영향"
+  },
+  {
+   "source": "빅테크 규제",
+   "target": "빅테크",
+   "rel": "영향"
+  },
+  {
+   "source": "빅테크 규제",
+   "target": "미국",
+   "rel": "영향"
+  },
+  {
+   "source": "빅테크 규제",
+   "target": "유럽",
+   "rel": "영향"
+  },
+  {
+   "source": "인구·고령화",
+   "target": "한국",
+   "rel": "영향"
+  },
+  {
+   "source": "인구·고령화",
+   "target": "일본",
+   "rel": "영향"
+  },
+  {
+   "source": "인구·고령화",
+   "target": "중국",
+   "rel": "영향"
+  },
+  {
+   "source": "인구·고령화",
+   "target": "1990 일본 버블 붕괴",
+   "rel": "유사"
+  },
+  {
+   "source": "2026-11-02 암호화폐 급증",
+   "target": "암호화폐",
+   "rel": "발생"
+  },
+  {
    "source": "1950-06 한국전쟁 발발",
    "target": "한국",
    "rel": "배경"
@@ -3743,5 +4710,150 @@
   "역사",
   "연표"
  ],
- "paths": []
+ "paths": [
+  {
+   "theme": "암호화폐",
+   "ratio": 1.5891868633903652,
+   "level": "급증",
+   "asset": "GLD",
+   "hops": 2,
+   "text": "암호화폐 —영향→ 달러 ←노출— GLD"
+  },
+  {
+   "theme": "암호화폐",
+   "ratio": 1.5891868633903652,
+   "level": "급증",
+   "asset": "TQQQ",
+   "hops": 4,
+   "text": "암호화폐 —영향→ 달러 ←결정— 연준 —결정→ 금리 ←노출— TQQQ"
+  },
+  {
+   "theme": "암호화폐",
+   "ratio": 1.5891868633903652,
+   "level": "급증",
+   "asset": "UPRO",
+   "hops": 4,
+   "text": "암호화폐 —영향→ 달러 ←결정— 연준 —결정→ 금리 ←노출— UPRO"
+  },
+  {
+   "theme": "한반도·북한",
+   "ratio": 1.2458900013746066,
+   "level": "증가",
+   "asset": "TQQQ",
+   "hops": 4,
+   "text": "한반도·북한 —영향→ 한국 ←소재— 삼성전자 —산업→ 반도체 ←노출— TQQQ"
+  },
+  {
+   "theme": "선거·정치",
+   "ratio": 1.2202603392891462,
+   "level": "증가",
+   "asset": "TQQQ",
+   "hops": 2,
+   "text": "선거·정치 —영향→ 미국 ←노출— TQQQ"
+  },
+  {
+   "theme": "선거·정치",
+   "ratio": 1.2202603392891462,
+   "level": "증가",
+   "asset": "UPRO",
+   "hops": 2,
+   "text": "선거·정치 —영향→ 미국 ←노출— UPRO"
+  },
+  {
+   "theme": "선거·정치",
+   "ratio": 1.2202603392891462,
+   "level": "증가",
+   "asset": "IEF",
+   "hops": 2,
+   "text": "선거·정치 —영향→ 미국 ←노출— IEF"
+  },
+  {
+   "theme": "금융 불안",
+   "ratio": 1.0423142358240165,
+   "level": "보통",
+   "asset": "TQQQ",
+   "hops": 2,
+   "text": "금융 불안 —영향→ 금리 ←노출— TQQQ"
+  },
+  {
+   "theme": "금융 불안",
+   "ratio": 1.0423142358240165,
+   "level": "보통",
+   "asset": "UPRO",
+   "hops": 2,
+   "text": "금융 불안 —영향→ 금리 ←노출— UPRO"
+  },
+  {
+   "theme": "금융 불안",
+   "ratio": 1.0423142358240165,
+   "level": "보통",
+   "asset": "IEF",
+   "hops": 2,
+   "text": "금융 불안 —영향→ 금리 ←노출— IEF"
+  },
+  {
+   "theme": "AI·기술",
+   "ratio": 1.0293560293397532,
+   "level": "보통",
+   "asset": "TQQQ",
+   "hops": 2,
+   "text": "AI·기술 —영향→ 빅테크 ←노출— TQQQ"
+  },
+  {
+   "theme": "AI·기술",
+   "ratio": 1.0293560293397532,
+   "level": "보통",
+   "asset": "UPRO",
+   "hops": 4,
+   "text": "AI·기술 —영향→ 빅테크 ←산업— 엔비디아 —소재→ 미국 ←노출— UPRO"
+  },
+  {
+   "theme": "AI·기술",
+   "ratio": 1.0293560293397532,
+   "level": "보통",
+   "asset": "IEF",
+   "hops": 4,
+   "text": "AI·기술 —영향→ 빅테크 ←산업— 엔비디아 —소재→ 미국 ←노출— IEF"
+  },
+  {
+   "theme": "분쟁·전쟁",
+   "ratio": 0.9993673107119163,
+   "level": "보통",
+   "asset": "GLD",
+   "hops": 2,
+   "text": "분쟁·전쟁 —영향→ 금 ←노출— GLD"
+  },
+  {
+   "theme": "전기차·배터리",
+   "ratio": 0.9419497605489319,
+   "level": "보통",
+   "asset": "TQQQ",
+   "hops": 4,
+   "text": "전기차·배터리 —영향→ 한국 ←소재— 삼성전자 —산업→ 반도체 ←노출— TQQQ"
+  },
+  {
+   "theme": "에너지 전환·전력",
+   "ratio": 0.9290503379441757,
+   "level": "보통",
+   "asset": "TQQQ",
+   "hops": 2,
+   "text": "에너지 전환·전력 —영향→ 빅테크 ←노출— TQQQ"
+  },
+  {
+   "theme": "에너지 전환·전력",
+   "ratio": 0.9290503379441757,
+   "level": "보통",
+   "asset": "UPRO",
+   "hops": 4,
+   "text": "에너지 전환·전력 —영향→ 빅테크 ←산업— 엔비디아 —소재→ 미국 ←노출— UPRO"
+  },
+  {
+   "theme": "에너지 전환·전력",
+   "ratio": 0.9290503379441757,
+   "level": "보통",
+   "asset": "IEF",
+   "hops": 4,
+   "text": "에너지 전환·전력 —영향→ 빅테크 ←산업— 엔비디아 —소재→ 미국 ←노출— IEF"
+  }
+ ]
 }
