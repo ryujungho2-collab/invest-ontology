@@ -289,7 +289,7 @@
    "type": "산업",
    "props": {
     "설명": "분쟁과 각국 국방비 증액의 수혜 산업.",
-    "관심도": 0.8829425495012392,
+    "관심도": 0.9629145327085831,
     "수준": "보통",
     "헤드라인": [
      "‘It’s a War of Attrition’: Drones Give No Military Edge in Sudan - The New York Times",
@@ -315,7 +315,7 @@
     "헤드라인": [
      "Binance customers withdraw $7.4 billion after crypto heist - CBS News",
      "Binance founder Changpeng Zhao addresses historic crypto hack: 'There's no 100% security' - Yahoo Finance",
-     "North Korea denies being behind record $6.3bn Binance hack - BBC"
+     "Bitcoin is breaking a midterm election pattern going back to 2014: Crypto Daily - CoinDesk"
     ]
    }
   },
@@ -516,8 +516,8 @@
     "수준": "보통",
     "헤드라인": [
      "Wall Street is bracing for a fresh wave of tariffs, Iran action (and potentially a government shutdown) after the midterms - Fortune",
-     "War, tariffs and China: What the US midterms mean for the Asia-Pacific - Al Jazeera",
-     "Christina Bohannan says Trump’s tariffs are costing families $4,200. That’s Mostly False. - The Daily Iowan"
+     "Section 338 Tariffs on Canada Put Congress at a Crossroads - Legis1",
+     "War, tariffs and China: What the US midterms mean for the Asia-Pacific - Al Jazeera"
     ]
    }
   },
@@ -551,7 +551,7 @@
    "id": "중앙은행·금리",
    "type": "이슈",
    "props": {
-    "관심도": 0.851198981997395,
+    "관심도": 0.8378568968627516,
     "수준": "보통",
     "헤드라인": [
      "Fed’s Rate Hold Sends Bond Yields in Different Directions - WSJ",
@@ -581,8 +581,8 @@
     "수준": "보통",
     "헤드라인": [
      "Hamburg Town Board approves data center moratorium - Spectrum News",
-     "How the fate of a Michigan data center hinges on Anthropic’s mega IPO - Crain's Detroit",
-     "NEWSLETTER: Data center opposition hits the ballot box - Reuters"
+     "NEWSLETTER: Data center opposition hits the ballot box - Reuters",
+     "How the fate of a Michigan data center hinges on Anthropic’s mega IPO - Crain's Detroit"
     ]
    }
   },
@@ -590,12 +590,12 @@
    "id": "반도체 공급망",
    "type": "이슈",
    "props": {
-    "관심도": 0.8967814217354882,
+    "관심도": 0.9114257782561748,
     "수준": "보통",
     "헤드라인": [
      "3 semiconductor stocks we approach with caution - Yahoo Finance",
      "Bosch to create semiconductor division from January 2028 - Reuters",
-     "TSMC, Samsung, and SK Hynix: Why This Investment Trust Is Reducing Its AI Exposure - Morningstar"
+     "TSMC Is Down 18%: The 2nm Ramp Should Change That (NYSE:TSM) - Seeking Alpha"
     ]
    }
   },
@@ -603,7 +603,7 @@
    "id": "대만·중국 긴장",
    "type": "이슈",
    "props": {
-    "관심도": 0.8894375343715994,
+    "관심도": 0.8811101905550953,
     "수준": "보통",
     "헤드라인": [
      "China military vice chair meets Russian defence minister in Beijing - Reuters",
@@ -632,9 +632,9 @@
     "관심도": 1.2202603392891462,
     "수준": "증가",
     "헤드라인": [
-     "Live Results: Nebraska Senate midterm election - PBS",
-     "Oregon 2026 Election Results - MultiState",
-     "Investors ready for possible shake-up in Congress as Election Day arrives - Reuters"
+     "Live fact check: Election Day 2026 - PBS",
+     "Democrats Show Strength in Final Days of Race for the Senate, New Polls Find - The New York Times",
+     "Florida 2026 Election Results - MultiState"
     ]
    }
   },
@@ -642,8 +642,8 @@
    "id": "보건·팬데믹",
    "type": "이슈",
    "props": {
-    "관심도": 0.8722798919255378,
-    "수준": "보통",
+    "관심도": 0.7916585244767432,
+    "수준": "감소",
     "헤드라인": [
      "Yum Revenue Rises Despite Taco Bell Cyclospora Outbreak Fallout - WSJ",
      "Taco Bell sales fall more than expected on cyclosporiasis outbreak hit - Reuters",
@@ -673,7 +673,7 @@
     "헤드라인": [
      "America's changing power grid faces a powerful El Niño - Axios",
      "320 MW nuclear power plant in US nears construction permit after safety review - Interesting Engineering",
-     "Ranked: The Countries Building the Most Nuclear Power – Visual Capitalist - EnergyNow.com"
+     "Putin offers African leaders military cooperation and nuclear power - National Security News"
     ]
    }
   },
@@ -694,7 +694,7 @@
    "id": "러시아·우크라이나",
    "type": "이슈",
    "props": {
-    "관심도": 0.8804063734603511,
+    "관심도": 0.8897673086926086,
     "수준": "보통",
     "헤드라인": [
      "Russian attack on Ukraine aid hub kills 31 as US announces new peace talks - Al Jazeera",
@@ -724,8 +724,8 @@
     "수준": "보통",
     "헤드라인": [
      "US Dollar Index edges up within range with midterm elections front and centre - FXStreet",
-     "U.S. Dollar Index (Derivatives) price today, DXY to USD live price, marketcap and chart - CoinMarketCap",
-     "US Dollar Index (DX-Y.NYB) Charts, Data & News - Yahoo Finance - Yahoo! Finance Canada"
+     "US Dollar Index (DX-Y.NYB) Charts, Data & News - Yahoo Finance - Yahoo! Finance Canada",
+     "US-Dollar-Index hält sich vor den US-Zwischenwahlen nahe 102,00 stabil - TradingView"
     ]
    }
   },
@@ -733,12 +733,12 @@
    "id": "일본·엔캐리",
    "type": "이슈",
    "props": {
-    "관심도": 0.8216049052751525,
-    "수준": "보통",
+    "관심도": 0.7710783557305888,
+    "수준": "감소",
     "헤드라인": [
      "What a Yen Carry Trade Unwind Means for Nasdaq and Nikkei Stocks - StoneX",
      "Bank of Japan signals December rate hike after inflation reaches 2.1% - Equiti Global",
-     "BOJ locks in December hike, but neutral-rate uncertainty muddies outlook - Reuters"
+     "Bank of Japan (8301.T) Seasonal returns chart - Yahoo Finance UK"
     ]
    }
   },
@@ -746,7 +746,7 @@
    "id": "미국 부채·재정",
    "type": "이슈",
    "props": {
-    "관심도": 0.4782001457371872,
+    "관심도": 0.54820506663465,
     "수준": "감소",
     "헤드라인": [
      "Treasury, European Government Bond Yields Rise as Markets Await U.S. Midterm Election Results - WSJ",
@@ -762,8 +762,8 @@
     "관심도": 0.5346650998824912,
     "수준": "감소",
     "헤드라인": [
-     "Mortgage Payments Soar, Locking Many Out Of Housing Market - Honolulu Civil Beat",
      "Mortgage Rates Today, November 3, 2026: 30-Year Rates Drop to 7.26% - WSJ",
+     "Mortgage Payments Soar, Locking Many Out Of Housing Market - Honolulu Civil Beat",
      "Is it time to reconsider the adjustable rate mortgage? : The Indicator from Planet Money - NPR"
     ]
    }
@@ -772,7 +772,7 @@
    "id": "중국 경제",
    "type": "이슈",
    "props": {
-    "관심도": 0.9120121436155193,
+    "관심도": 0.9643631909566278,
     "수준": "보통",
     "헤드라인": [
      "China to raise FX reserve requirement to slow yuan's rally - Reuters",
@@ -814,9 +814,9 @@
     "관심도": 0.9419497605489319,
     "수준": "보통",
     "헤드라인": [
-     "'Most Companies Are Struggling': Executive Shares An Uncomfortable Truth About Solid-State EV Batteries - InsideEVs",
      "Charlottesville discussing electric vehicle fleet expansion - cbs19news.com",
-     "Save Gas, Save Time, Save Money: We Test the Top EV Chargers to Find the Best for Your Home - Car and Driver"
+     "90% in 14.7 minutes: New EV battery delivers faster charging in tests - Interesting Engineering",
+     "Omar Bolori Sees Surprising Shift in Nigeria’s Electric Vehicle Market. - Bergen Record"
     ]
    }
   },
@@ -824,12 +824,12 @@
    "id": "바이오·비만치료제",
    "type": "이슈",
    "props": {
-    "관심도": 0.8579455756829797,
+    "관심도": 0.8522461101502906,
     "수준": "보통",
     "헤드라인": [
      "Pfizer pares back obesity pipeline, drops phase 2-stage lung disease candidate - Fierce Biotech",
-     "Teen shares the impact taking a GLP-1 drug has on his daily life - ABC News - Breaking News, Latest News and Videos",
-     "14 New Weight Loss Drugs - GoodRx"
+     "LG Chem's obesity drug deal with Rhythm grows to $855 million - Korea Biomedical Review",
+     "Can Storage Mistakes Ruin a GLP-1 Drug? - Medscape"
     ]
    }
   },
@@ -863,7 +863,7 @@
    "id": "고용·노동",
    "type": "이슈",
    "props": {
-    "관심도": 0.8932893581934728,
+    "관심도": 0.8824622573051805,
     "수준": "보통",
     "헤드라인": [
      "175 CT-based workers at aerospace manufacturer Triumph go on strike - CT Insider",
@@ -881,7 +881,7 @@
     "헤드라인": [
      "Meta Faces U.K. Antitrust Probe Over Publisher Content Terms - WSJ",
      "What the midterm elections mean for the economy and investors - TradingView",
-     "Fox’s $22 billion Roku deal poised to clear U.S. antitrust review - Semafor - Yahoo Finance"
+     "The campaigns centering Big Tech - Politico"
     ]
    }
   },
@@ -907,7 +907,7 @@
     "헤드라인": [
      "Binance customers withdraw $7.4 billion after crypto heist - CBS News",
      "Binance founder Changpeng Zhao addresses historic crypto hack: 'There's no 100% security' - Yahoo Finance",
-     "North Korea denies being behind record $6.3bn Binance hack - BBC"
+     "Bitcoin is breaking a midterm election pattern going back to 2014: Crypto Daily - CoinDesk"
     ]
    }
   },
@@ -4824,36 +4824,28 @@
    "text": "분쟁·전쟁 —영향→ 금 ←노출— GLD"
   },
   {
-   "theme": "전기차·배터리",
-   "ratio": 0.9419497605489319,
-   "level": "보통",
-   "asset": "TQQQ",
-   "hops": 4,
-   "text": "전기차·배터리 —영향→ 한국 ←소재— 삼성전자 —산업→ 반도체 ←노출— TQQQ"
-  },
-  {
-   "theme": "에너지 전환·전력",
-   "ratio": 0.9290503379441757,
+   "theme": "방산",
+   "ratio": 0.9629145327085831,
    "level": "보통",
    "asset": "TQQQ",
    "hops": 2,
-   "text": "에너지 전환·전력 —영향→ 빅테크 ←노출— TQQQ"
+   "text": "방산 —영향→ 미국 ←노출— TQQQ"
   },
   {
-   "theme": "에너지 전환·전력",
-   "ratio": 0.9290503379441757,
+   "theme": "방산",
+   "ratio": 0.9629145327085831,
    "level": "보통",
    "asset": "UPRO",
-   "hops": 4,
-   "text": "에너지 전환·전력 —영향→ 빅테크 ←산업— 엔비디아 —소재→ 미국 ←노출— UPRO"
+   "hops": 2,
+   "text": "방산 —영향→ 미국 ←노출— UPRO"
   },
   {
-   "theme": "에너지 전환·전력",
-   "ratio": 0.9290503379441757,
+   "theme": "방산",
+   "ratio": 0.9629145327085831,
    "level": "보통",
    "asset": "IEF",
-   "hops": 4,
-   "text": "에너지 전환·전력 —영향→ 빅테크 ←산업— 엔비디아 —소재→ 미국 ←노출— IEF"
+   "hops": 2,
+   "text": "방산 —영향→ 미국 ←노출— IEF"
   }
  ]
 }
