@@ -14,9 +14,9 @@
     "이름": "나스닥100 3배",
     "목표비중": "0.0%",
     "보유": false,
-    "종가": 56.56,
-    "200일선대비": "-13.6%",
-    "1개월": "-29.0%",
+    "종가": 60.44,
+    "200일선대비": "-7.7%",
+    "1개월": "-23.3%",
     "신호": "청산"
    }
   },
@@ -27,9 +27,9 @@
     "이름": "S&P500 3배",
     "목표비중": "18.0%",
     "보유": true,
-    "종가": 136.37,
-    "200일선대비": "+1.8%",
-    "1개월": "-12.3%",
+    "종가": 141.7,
+    "200일선대비": "+5.7%",
+    "1개월": "-8.8%",
     "신호": "보유"
    }
   },
@@ -40,9 +40,9 @@
     "이름": "반도체 3배",
     "목표비중": "0.0%",
     "보유": false,
-    "종가": 56.06,
-    "200일선대비": "-54.8%",
-    "1개월": "-56.3%"
+    "종가": 66.03,
+    "200일선대비": "-46.8%",
+    "1개월": "-48.2%"
    }
   },
   {
@@ -52,9 +52,9 @@
     "이름": "기술주 3배",
     "목표비중": "0.0%",
     "보유": false,
-    "종가": 139.25,
-    "200일선대비": "-19.1%",
-    "1개월": "-40.3%"
+    "종가": 152.62,
+    "200일선대비": "-11.4%",
+    "1개월": "-34.4%"
    }
   },
   {
@@ -64,9 +64,9 @@
     "이름": "금",
     "목표비중": "10.0%",
     "보유": true,
-    "종가": 369.36,
-    "200일선대비": "-10.0%",
-    "1개월": "-3.3%"
+    "종가": 365.17,
+    "200일선대비": "-10.9%",
+    "1개월": "-4.3%"
    }
   },
   {
@@ -76,9 +76,9 @@
     "이름": "미국 중기국채",
     "목표비중": "30.0%",
     "보유": true,
-    "종가": 91.01,
-    "200일선대비": "-1.6%",
-    "1개월": "+1.8%"
+    "종가": 90.94,
+    "200일선대비": "-1.3%",
+    "1개월": "+1.9%"
    }
   },
   {
@@ -88,9 +88,9 @@
     "이름": "미국 장기국채",
     "목표비중": "0.0%",
     "보유": false,
-    "종가": 80.88,
-    "200일선대비": "-2.7%",
-    "1개월": "+3.6%"
+    "종가": 80.92,
+    "200일선대비": "-2.2%",
+    "1개월": "+3.7%"
    }
   },
   {
@@ -100,9 +100,9 @@
     "이름": "원자재 바스켓",
     "목표비중": "30.0%",
     "보유": true,
-    "종가": 30.76,
-    "200일선대비": "+4.2%",
-    "1개월": "-7.7%"
+    "종가": 30.84,
+    "200일선대비": "+4.4%",
+    "1개월": "-7.9%"
    }
   },
   {
@@ -112,9 +112,9 @@
     "이름": "초단기 국채(현금성)",
     "목표비중": "12.0%",
     "보유": true,
-    "종가": 91.49,
-    "200일선대비": "+1.1%",
-    "1개월": "-0.0%"
+    "종가": 91.5,
+    "200일선대비": "+1.4%",
+    "1개월": "+0.3%"
    }
   },
   {
@@ -124,9 +124,9 @@
     "이름": "나스닥100 (신호용 지수)",
     "목표비중": "0.0%",
     "보유": false,
-    "종가": 674.76,
-    "200일선대비": "-0.8%",
-    "1개월": "-9.6%"
+    "종가": 690.38,
+    "200일선대비": "+1.4%",
+    "1개월": "-7.2%"
    }
   },
   {
@@ -136,9 +136,9 @@
     "이름": "S&P500 (신호용 지수)",
     "목표비중": "0.0%",
     "보유": false,
-    "종가": 749.92,
-    "200일선대비": "+3.0%",
-    "1개월": "-3.6%"
+    "종가": 759.81,
+    "200일선대비": "+4.3%",
+    "1개월": "-2.3%"
    }
   },
   {
@@ -148,9 +148,9 @@
     "이름": "반도체 지수 (신호용)",
     "목표비중": "0.0%",
     "보유": false,
-    "종가": 483.63,
-    "200일선대비": "-7.5%",
-    "1개월": "-18.2%"
+    "종가": 506.96,
+    "200일선대비": "-3.1%",
+    "1개월": "-13.8%"
    }
   },
   {
@@ -160,9 +160,9 @@
     "이름": "기술 섹터 (신호용)",
     "목표비중": "0.0%",
     "보유": false,
-    "종가": 168.91,
-    "200일선대비": "-0.7%",
-    "1개월": "-14.0%"
+    "종가": 174.36,
+    "200일선대비": "+2.4%",
+    "1개월": "-11.2%"
    }
   },
   {
@@ -289,9 +289,13 @@
    "type": "산업",
    "props": {
     "설명": "분쟁과 각국 국방비 증액의 수혜 산업.",
-    "관심도": 0.8169228695723795,
+    "관심도": 0.8078458008191785,
     "수준": "보통",
-    "헤드라인": []
+    "헤드라인": [
+     "Germany reportedly bans Chinese drones at military bases over security concerns - The Guardian",
+     "Germany's military will stop using Chinese-made drones for training purposes - ABC News - Breaking News, Latest News and Videos",
+     "German military to stop using Chinese-made drones, citing security concerns - Reuters"
+    ]
    }
   },
   {
@@ -306,12 +310,12 @@
    "type": "요인",
    "props": {
     "설명": "비트코인·스테이블코인. 유동성과 위험선호를 보여주는 고변동 자산.",
-    "관심도": 1.163199244129554,
-    "수준": "증가",
+    "관심도": 1.141152631990886,
+    "수준": "보통",
     "헤드라인": [
+     "Binance hack reveals crypto's uphill battle against hackers - Reuters",
      "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History - Yahoo! Finance Canada",
-     "Goldman, Citi Among Banks in $270 Million Stablecoin Backing - Bloomberg.com",
-     "Goldman Sachs, Citi among banks said to commit $270 million to stablecoin venture - CoinDesk"
+     "FSB recommends Türkiye further strengthens its regulatory framework for crypto-assets and stablecoins - Financial Stability Board"
     ]
    }
   },
@@ -508,12 +512,12 @@
    "id": "무역·관세",
    "type": "이슈",
    "props": {
-    "관심도": 1.0897021187007523,
+    "관심도": 1.0681803267930967,
     "수준": "보통",
     "헤드라인": [
-     "White House vows to press ahead with tariffs despite midterm backlash over rising prices - CNBC",
-     "Opinion | How Do You Like Those Tariffs Now? - WSJ",
-     "Whitmer asks Trump administration to end food tariffs, reimburse Michiganders for increased costs - Michigan Advance"
+     "Canada’s ambassador warns Trump tariffs are driving up costs, threatening U.S. investment - CNBC",
+     "Whitmer wants end to food tariffs - Michigan Public",
+     "Opinion | How Do You Like Those Tariffs Now? - WSJ"
     ]
    }
   },
@@ -521,12 +525,12 @@
    "id": "분쟁·전쟁",
    "type": "이슈",
    "props": {
-    "관심도": 0.9592040663380017,
+    "관심도": 0.9763915924067361,
     "수준": "보통",
     "헤드라인": [
-     "Iran Uses Global Climate Talks to Highlight Impact of US Strike - Bloomberg.com",
-     "El Salvador launches missile strike on Haitian gangs - News.com.au",
-     "Russian Offensive Campaign Assessment, November 9, 2026 - Institute for the Study of War"
+     "U.S. Strikes Three Iranian Oil Tankers After Missile Attacks on Navy Warships - EnergyNow.com",
+     "Kharkiv hit by two consecutive missile strikes - Ukrinform",
+     "Yemen security sources report strikes on Aden - France 24"
     ]
    }
   },
@@ -534,12 +538,12 @@
    "id": "중동·에너지",
    "type": "이슈",
    "props": {
-    "관심도": 0.7319886319376214,
+    "관심도": 0.7097442542947973,
     "수준": "감소",
     "헤드라인": [
-     "Uncertainty Surrounds Possible Attack on Oman's Strait of Hormuz Lighthouse - The Maritime Executive",
-     "Exclusive | Adnoc Gas Still Evaluating Options to Bypass Strait of Hormuz - WSJ",
-     "Rubio urges nations to ‘step up’ on Strait of Hormuz security - Los Angeles Times"
+     "Oil production nears pre-Iran war levels, OPEC says - Al Jazeera",
+     "OPEC+ oil output in October nears pre-Iran war rate, led by Saudi Arabia - Reuters",
+     "OPEC’s Oil Production Nears Prewar Levels on Saudi Rebound - WSJ"
     ]
    }
   },
@@ -547,12 +551,12 @@
    "id": "중앙은행·금리",
    "type": "이슈",
    "props": {
-    "관심도": 0.7370773689049871,
+    "관심도": 0.7701727823298896,
     "수준": "감소",
     "헤드라인": [
-     "Hot Inflation Revives Wall Street’s Rate Hike Fears - WSJ",
-     "Energy and the Economy: Tail Risks, Tailwinds and Resiliency - Federal Reserve Bank of Dallas",
-     "Fed’s Waller opens door to half-point rate hike in December - The Hill"
+     "COMMENTARY: A 50 bps rate hike? Warsh's Fed has a comms problem - Reuters",
+     "Gold Holds Below $4,000 as Market Looks Ahead to Fed Rate Hike - Bloomberg.com",
+     "Dollar Rises to 19-Month High on Fed Rate-Hike Bets - WSJ"
     ]
    }
   },
@@ -560,12 +564,12 @@
    "id": "인플레이션",
    "type": "이슈",
    "props": {
-    "관심도": 1.0284839777625088,
+    "관심도": 0.9411979279722462,
     "수준": "보통",
     "헤드라인": [
-     "US consumer prices rise briskly for third straight month - Reuters",
-     "Inflation remained elevated in October, cementing a Fed rate increase - Politico",
-     "Here's the inflation breakdown for October 2026 — in one chart - CNBC"
+     "Inflation Continues to Challenge U.S. Economy - The New York Times",
+     "Fed's Goolsbee calls inflation report 'borderline disturbing' as central bank weighs more hikes - CNBC",
+     "Harsh new inflation reality - Axios"
     ]
    }
   },
@@ -573,12 +577,12 @@
    "id": "AI·기술",
    "type": "이슈",
    "props": {
-    "관심도": 0.9604636777955006,
+    "관심도": 0.963959427707722,
     "수준": "보통",
     "헤드라인": [
-     "How artificial intelligence is changing healthcare - MPR News",
-     "SpaceX plans $24 billion data center project in Starbase - The Texas Tribune",
-     "Oakland extends data center moratorium until 2027 - The Oaklandside"
+     "Hawley calls for Senate to pass data center moratorium - The Hill",
+     "TCU Experts Inform Fort Worth Data Center Policy - Texas Christian University",
+     "Data center poster child strikes back - The Washington Post"
     ]
    }
   },
@@ -586,12 +590,12 @@
    "id": "반도체 공급망",
    "type": "이슈",
    "props": {
-    "관심도": 3.777329855446323,
+    "관심도": 6.060634792362887,
     "수준": "급증",
     "헤드라인": [
-     "TSMC to invest up to $1 billion in Anthropic, OpenAI - Reuters",
-     "TSMC's October sales jump as global chip boom rolls on - CNBC",
-     "Taiwan Semiconductor Sales Jump 60% In October As AI Boom Continues - Investor's Business Daily"
+     "Dell Technologies vs. Taiwan Semiconductor: Which Technology Stock Is a Better Buy for 2027? - The Motley Fool",
+     "Taiwan’s chipmaking giant TSMC to invest $1B in Anthropic, OpenAI - Ars Technica",
+     "ON Semiconductor Stock Gets A Lift From New Chip Platform And Earnings Momentum - Yahoo Finance"
     ]
    }
   },
@@ -599,12 +603,12 @@
    "id": "대만·중국 긴장",
    "type": "이슈",
    "props": {
-    "관심도": 0.8788014844364624,
+    "관심도": 0.8999575391583317,
     "수준": "보통",
     "헤드라인": [
-     "G7 foreign ministers reiterate opposition to coercion in Taiwan Strait - Taipei Times",
-     "The South China Sea, Frame by Frame - CGTN",
-     "Why Manila’s call for softer tone will not ease South China Sea row with Beijing - South China Morning Post"
+     "China and ASEAN make progress on South China Sea pact but can’t finish talks this year - AP News",
+     "Philippines-China Cooperation: Jointly Fighting Crimes Beyond The South China Sea Disputes - OpEd - Eurasia Review",
+     "G7 ministers reaffirm Ukraine support, condemn China's military aid - Japan Wire by Kyodo News"
     ]
    }
   },
@@ -612,12 +616,12 @@
    "id": "금융 불안",
    "type": "이슈",
    "props": {
-    "관심도": 1.178266532816739,
-    "수준": "증가",
+    "관심도": 1.110497510797534,
+    "수준": "보통",
     "헤드라인": [
-     "Paraguay Bank Failure - Bluefield Daily Telegraph",
-     "ECB contender Klaas Knot ‘won’t hesitate’ to act in a debt crisis - Financial Times",
-     "Deficits could drive US to debt crisis a la France - Scranton Times-Tribune"
+     "A new debt crisis for Russia’s regions? - Riddle Russia",
+     "SNB sees no signs of a credit crunch - finews.com",
+     "Ray Dalio’s grim verdict: The US has 1 shot at success, and he doesn’t like the odds — protect yourself as time runs out - MoneyWise.com"
     ]
    }
   },
@@ -625,12 +629,12 @@
    "id": "선거·정치",
    "type": "이슈",
    "props": {
-    "관심도": 6.31468506681475,
+    "관심도": 4.810744316547386,
     "수준": "급증",
     "헤드라인": [
-     "House votes to effectively end the impeachment effort against Pete Hegseth - NPR",
-     "House rejects Hegseth impeachment as GOP selects Jordan and Thune as leaders - PBS",
-     "2026 Election by the Numbers - Council on Foreign Relations"
+     "Close Count project update one week after Election Day - California Voter Foundation",
+     "Scott Colom wins Senate election in Mississippi - PBS",
+     "Democrats Face Backlash After Missing Hegseth Impeachment Vote - The New York Times"
     ]
    }
   },
@@ -638,12 +642,12 @@
    "id": "보건·팬데믹",
    "type": "이슈",
    "props": {
-    "관심도": 0.8293316028552887,
+    "관심도": 0.8641159846825305,
     "수준": "보통",
     "헤드라인": [
-     "US poised to lose measles elimination status—what does that mean? - CIDRAP",
-     "After Hurricanes, Recessions and a Pandemic, How Did NC’s Small Towns Fare? - Davidson College",
-     "WHO Health Emergencies EPI-WIN webinar: Update on the current Ebola Bundibugyo virus disease outbreak - World Health Organization (WHO)"
+     "Diabetes - World Health Organization (WHO)",
+     "Capitola Beach closed after 9 children sickened by E. coli outbreak, health officials say - ABC7 Bay Area",
+     "Ebola tops 11,000 cases in Congo's deadliest outbreak - NPR"
     ]
    }
   },
@@ -651,12 +655,12 @@
    "id": "기후·재해",
    "type": "이슈",
    "props": {
-    "관심도": 0.7692631037361422,
+    "관심도": 0.7694178261761643,
     "수준": "감소",
     "헤드라인": [
-     "Wildfire season officially ends in Washington – state Lands Commissioner seeks future funding - Washington State Standard",
-     "Magnitude 4.3 earthquake rattles Oregon city with moderate shaking reported - FOX Weather",
-     "4.3 magnitude earthquake shakes near Wallowa-Whitman National Forest - KGW"
+     "Even Cacti Are Threatened by Heat and Drought From Global Warming - Inside Climate News",
+     "The Wildfire Emissions Protection Act May Have Unintended Consequences - Resources Magazine",
+     "Severe drought and warming increase the extinction risk of cacti - Nature"
     ]
    }
   },
@@ -664,12 +668,12 @@
    "id": "에너지 전환·전력",
    "type": "이슈",
    "props": {
-    "관심도": 0.9161619058867199,
+    "관심도": 0.9118749444088536,
     "수준": "보통",
     "헤드라인": [
-     "LEAP District land purchase faces pushback over company's ties to nuclear power development - Indiana Capital Chronicle",
-     "Ukraine urges US to speed up interceptor deliveries as Russia targets power grid - Reuters",
-     "Oil Touches Two-Week High After Drone Attack on UAE Nuclear Power Plant - EnergyNow.com"
+     "Global Power Grid Expansion Surges 50% to Record High - Crude Oil Prices Today | OilPrice.com",
+     "CFE Fibra E Seeks US$867 Million to Expand Mexico’s Power Grid - Mexico Business News",
+     "COMMENTARY: Asia's nuclear pipeline marks a new challenge for fossil fuel demand - Reuters"
     ]
    }
   },
@@ -677,12 +681,12 @@
    "id": "제재·탈달러",
    "type": "이슈",
    "props": {
-    "관심도": 0.6277838682686652,
+    "관심도": 0.6687890777460607,
     "수준": "감소",
     "헤드라인": [
-     "Russian Push to Escape Dollar for Yuan Collapses Under Sanctions - Bloomberg.com",
-     "Iraq bars plane carrying Iran's soccer team from landing in Basra over US sanctions, officials say - Reuters",
-     "Senate overwhelmingly advances Russia sanctions bill named after Sen. Lindsey Graham - ABC News - Breaking News, Latest News and Videos"
+     "EU envoys agree new Russia sanctions listings on banks, shadow fleet and misinformation - Reuters",
+     "When sanctions meet corruption: Iran and the risk of conflict — Part 2 - Devpolicy Blog from the Development Policy Centre",
+     "US Congress Urged To Tighten Russia Sanctions, Speed Military Aid - Radio Free Europe/Radio Liberty"
     ]
    }
   },
@@ -690,12 +694,12 @@
    "id": "러시아·우크라이나",
    "type": "이슈",
    "props": {
-    "관심도": 0.8397612463224305,
+    "관심도": 0.8394245746435501,
     "수준": "보통",
     "헤드라인": [
-     "Russia and Ukraine hold nearly 4 hours of US-mediated talks in Abu Dhabi - AP News",
-     "Russia-Ukraine talks: What's changed since the last round? - ABC News - Breaking News, Latest News and Videos",
-     "First day of Russia-Ukraine talks in Abu Dhabi ‘constructive’: Zelenskyy - Al Jazeera"
+     "Russia and Ukraine agree to a prisoner exchange as talks end with no big breakthrough - NPR",
+     "Russia, Ukraine reach deal on prisoner swap as US says lack of trust holds back talks - Reuters",
+     "Russia-Ukraine talks end without breakthrough announcement amid barrage of drones - ABC News - Breaking News, Latest News and Videos"
     ]
    }
   },
@@ -703,12 +707,12 @@
    "id": "한반도·북한",
    "type": "이슈",
    "props": {
-    "관심도": 0.8124351749596932,
-    "수준": "보통",
+    "관심도": 0.7699756290386511,
+    "수준": "감소",
     "헤드라인": [
-     "[Tanee Sangrat] Changes in world order, politics around Korean Peninsula - The Korea Herald",
+     "North Korea tests high-speed torpedo, plans 2027 deployment - upi",
      "North Korea claims high-speed torpedo test, plans deployment early next year - Stars and Stripes",
-     "North Korea Ramps Up Missile Tests as Tensions Rise on Korean Peninsula - TLTC Blogs |"
+     "How Lax Enforcement in Laos Undermines Security on the Korean Peninsula - Korea Economic Institute of America -"
     ]
    }
   },
@@ -716,12 +720,12 @@
    "id": "달러·환율",
    "type": "이슈",
    "props": {
-    "관심도": 0.8871927967471034,
+    "관심도": 0.9000185615338828,
     "수준": "보통",
     "헤드라인": [
-     "FX weekly: Dollar leads currency markets higher, while Aussie and loonie face pessure - TradingView",
-     "Resetting the Focus of the U.S. Dollar Index: After the Release of Non-Farm Payrolls, Attention Shifts to Inflation and Policy Path - Moomoo",
-     "US Dollar Index (DXY) trims losses ahead of US inflation data - FXStreet"
+     "US Dollar Index Streaming Chart - Investing.com",
+     "Dollar Index crossed a 19-month high as the greenback continues to rally - Seeking Alpha",
+     "US Dollar Index Price Forecast: DXY hits yearly high after bullish flag breakout - FXStreet"
     ]
    }
   },
@@ -729,12 +733,12 @@
    "id": "일본·엔캐리",
    "type": "이슈",
    "props": {
-    "관심도": 0.7832470208089372,
+    "관심도": 0.7843320595170339,
     "수준": "감소",
     "헤드라인": [
      "Bank of Japan debated need for faster rate hikes, October summary shows - Reuters",
-     "Bank of Japan rate debate switches to pace and timing of future hikes - Financial Times",
-     "How the Yen Carry Trade Links the Nikkei to the Nasdaq 100 - StoneX"
+     "How the Yen Carry Trade Links the Nikkei to the Nasdaq 100 - StoneX",
+     "Mitsui Chemicals to Acquire JSR With Development Bank of Japan for $8.8 Billion - WSJ"
     ]
    }
   },
@@ -742,12 +746,12 @@
    "id": "미국 부채·재정",
    "type": "이슈",
    "props": {
-    "관심도": 0.6829162117635345,
+    "관심도": 0.45746082216670453,
     "수준": "감소",
     "헤드라인": [
-     "Scope for Treasury Yields to Continue Rising - WSJ",
-     "One factor pushing interest rates higher? Growing domestic ownership of U.S. debt - Marketplace.org",
-     "Troubled US debt levels ticked up in third quarter, New York Fed report says - Reuters"
+     "Treasury Yields Down Following Democrats Midterm Win - WSJ",
+     "News | Higher Treasury yields give buyers more bargaining power - CoStar",
+     "The equity cushion: Why US debt hasn't shaken markets - LSEG"
     ]
    }
   },
@@ -755,12 +759,12 @@
    "id": "부동산",
    "type": "이슈",
    "props": {
-    "관심도": 0.6751844173376403,
+    "관심도": 0.6541811846689896,
     "수준": "감소",
     "헤드라인": [
-     "Today's Current Mortgage Rates: November 10, 2026 - MONEY",
-     "Housing Market Predictions For 2026: When Will Home Prices Drop? - Forbes",
-     "Mortgages For Retirees And Older Adults - Bankrate"
+     "Mortgage rates jump sharply higher, after easing for four straight weeks. Here's why - CNBC",
+     "Even at 6%, Mortgage Rates May Not Be Enough to Unlock Home Sales - National Mortgage Professional",
+     "Mortgage rates fall again, offering borrowers mild relief - Mortgage Professional America"
     ]
    }
   },
@@ -768,12 +772,12 @@
    "id": "중국 경제",
    "type": "이슈",
    "props": {
-    "관심도": 0.8013440936010897,
-    "수준": "보통",
+    "관심도": 0.7942672058735929,
+    "수준": "감소",
     "헤드라인": [
-     "Russian Push to Escape Dollar for Yuan Collapses Under Sanctions - Bloomberg.com",
-     "EXCLUSIVE: Chinese banks boost dollar deposit rates, sources say, as Beijing seeks to smooth yuan rally - Reuters",
-     "Unitree Stock Extends Rebound, Briefly Touching 809 Yuan - Gasgoo"
+     "Russia bows out of attempt to replace US dollar with Chinese yuan after years of promoting currency alternatives among its BRICS friends - Business Insider Africa",
+     "US sanctions crush Russia’s plan to ditch the dollar for China’s yuan - Lynnwood Times",
+     "China says offshore trust tax declarations top 160 billion yuan - Reuters"
     ]
    }
   },
@@ -781,12 +785,12 @@
    "id": "핵심 광물",
    "type": "이슈",
    "props": {
-    "관심도": 0.8635790424233186,
+    "관심도": 0.8667024452420085,
     "수준": "보통",
     "헤드라인": [
-     "Skip the Bin. Turn Your Batteries In. - Greensboro-nc.gov",
-     "What to know about the rise in lithium-ion battery fires - IAFF",
-     "A 'Geologic Freak' in Arkansas Is Big Oil's New Lithium Bet - Crude Oil Prices Today | OilPrice.com"
+     "Lithium Americas Provides Thacker Pass Project Update - Lithium Americas",
+     "ON YOUR SIDE: Local experts share tips to prevent lithium-ion battery fires - KY3",
+     "Do You Have Lithium Batteries at Work? Safety Risks You May Be Overlooking and How to Protect Your Staff - JD Supra"
     ]
    }
   },
@@ -794,12 +798,12 @@
    "id": "식량·농산물",
    "type": "이슈",
    "props": {
-    "관심도": 0.8962873255080999,
+    "관심도": 0.8926631338551252,
     "수준": "보통",
     "헤드라인": [
-     "As Food Prices Climb, Global Refuge Warns Immigration Crackdown Is Adding to Families’ Grocery Bills - Global Refuge",
-     "Wheat Pops Higher on Spillover Support, as USDA Carryout - Barchart.com",
-     "Wheat crops receive reinforcements in battle against Hessian fly - Purdue University - College of Agriculture"
+     "Wheat Posts Midweek Gains - Barchart.com",
+     "Grains Recover From Early Losses as Wheat and Soybeans Close Higher | Wednesday, Nov. 11, 2026 - Successful Farming",
+     "Israel is ‘disrupting entire ecosystems’, including Lebanon’s wheat crop - Al Jazeera"
     ]
    }
   },
@@ -807,12 +811,12 @@
    "id": "전기차·배터리",
    "type": "이슈",
    "props": {
-    "관심도": 1.133248870987255,
+    "관심도": 1.1368172268907564,
     "수준": "보통",
     "헤드라인": [
-     "'Most Companies Are Struggling': Executive Shares An Uncomfortable Truth About Solid-State EV Batteries - InsideEVs",
-     "Asia Minute: Chinese electric vehicle sales speeding ahead in Australia - Hawaii Public Radio",
-     "Homewood council passes rules for electric vehicle charging stations - thehomewoodstar.com"
+     "Global electric vehicle sales return to growth in October - Bellingham Herald",
+     "500,000 EV Battery Health Checks Put 20 Models To The Test. One Car Stood Out - InsideEVs",
+     "Global electric vehicle sales return to growth in October By Reuters - Investing.com"
     ]
    }
   },
@@ -820,12 +824,12 @@
    "id": "바이오·비만치료제",
    "type": "이슈",
    "props": {
-    "관심도": 0.8397759736591507,
+    "관심도": 0.8550955628487922,
     "수준": "보통",
     "헤드라인": [
-     "Could GLP-1 weight loss drugs cause permanent vision loss? - Northeastern Global News",
-     "FDA warns of rare eye condition causing blindness from GLP-1 weight loss medications - The Guardian",
-     "Boehringer-Zealand obesity drug clears cardiovascular safety hurdle, but tolerability concerns remain - European Biotechnology Magazine"
+     "Pfizer secures up to $1.5 billion from Blackstone for obesity drug development - Reuters",
+     "Blackstone Puts Up $1.5 Billion for Pfizer Obesity Drug Studies - Bloomberg",
+     "Column | Powerful new weight-loss drug may also ease knee pain, major study finds - The Washington Post"
     ]
    }
   },
@@ -833,12 +837,12 @@
    "id": "양자·로봇",
    "type": "이슈",
    "props": {
-    "관심도": 0.8468184813648678,
+    "관심도": 0.8186968838526912,
     "수준": "보통",
     "헤드라인": [
-     "UCF Doctoral Student Wins 2nd Place in Global Quantum Computing Hackathon - University of Central Florida",
-     "Humanoid robot competes with humans in Antarctic ultra-marathon - NBC News",
-     "RIKEN and Quantinuum Demonstrate Heterogeneous Multi-QPU Workflows on Fugaku - Quantum Computing Report"
+     "Quantum computing hits ‘put up or shut up’ moment - Federal News Network",
+     "The year of advantage—and what comes next - IBM",
+     "Quantum Computing Is Being Pitched as the Fix for AI's Runaway Power Appetite - Crude Oil Prices Today | OilPrice.com"
     ]
    }
   },
@@ -846,61 +850,77 @@
    "id": "사이버보안",
    "type": "이슈",
    "props": {
-    "관심도": 1.0450433015627267,
+    "관심도": 0.9972181864503644,
     "수준": "보통",
-    "헤드라인": []
+    "헤드라인": [
+     "Binance hack reveals crypto's uphill battle against hackers - Reuters",
+     "Ransomware Gang Says It Hacked Vanderbilt University - Inside Higher Ed",
+     "Lawsuit filed over Vanderbilt University cyberattack - WKRN News 2"
+    ]
    }
   },
   {
    "id": "고용·노동",
    "type": "이슈",
    "props": {
-    "관심도": 0.9241183253150969,
+    "관심도": 0.8950161143854277,
     "수준": "보통",
-    "헤드라인": []
+    "헤드라인": [
+     "Workers in Spain Stage a General Strike for the First Time in 14 Years - The New York Times",
+     "‘Close Calls’ at OC Landfills Amid Strike as Untrained Workers Are Pressed Into Service - Voice of OC",
+     "With 274 trona workers facing January layoffs, WE Soda union opposes company's pending $13M state grant - WyoFile"
+    ]
    }
   },
   {
    "id": "빅테크 규제",
    "type": "이슈",
    "props": {
-    "관심도": 1.0077659382337005,
+    "관심도": 1.1078204116111967,
     "수준": "보통",
-    "헤드라인": []
+    "헤드라인": [
+     "Big tech's power posing tough questions for EU legal system, top judge says - MLex",
+     "Jonathan Kanter is using AI to take on Big Tech - The Verge",
+     "Slack to Microsoft: Bundling Teams with Office is an antitrust violation - Mashable"
+    ]
    }
   },
   {
    "id": "인구·고령화",
    "type": "이슈",
    "props": {
-    "관심도": 0.7908191976847013,
-    "수준": "감소",
-    "헤드라인": []
-   }
-  },
-  {
-   "id": "2026-11-10 반도체 공급망 급증",
-   "type": "사건",
-   "props": {
-    "날짜": "2026-11-10",
-    "관심도": 3.78,
+    "관심도": 0.8210334826040178,
+    "수준": "보통",
     "헤드라인": [
-     "TSMC to invest up to $1 billion in Anthropic, OpenAI - Reuters",
-     "TSMC's October sales jump as global chip boom rolls on - CNBC",
-     "Taiwan Semiconductor Sales Jump 60% In October As AI Boom Continues - Investor's Business Daily"
+     "Utah’s plummeting birth rate will bring a wide array of chal... - Salt Lake City Weekly",
+     "The hidden caregivers of Colorado’s aging population? Children - Colorado Public Radio",
+     "Ukraine is rapidly losing its future generations: the birth rate has fallen by almost 40 per cent - UkrMedia News"
     ]
    }
   },
   {
-   "id": "2026-11-10 선거·정치 급증",
+   "id": "2026-11-11 반도체 공급망 급증",
    "type": "사건",
    "props": {
-    "날짜": "2026-11-10",
-    "관심도": 6.31,
+    "날짜": "2026-11-11",
+    "관심도": 6.06,
     "헤드라인": [
-     "House votes to effectively end the impeachment effort against Pete Hegseth - NPR",
-     "House rejects Hegseth impeachment as GOP selects Jordan and Thune as leaders - PBS",
-     "2026 Election by the Numbers - Council on Foreign Relations"
+     "Dell Technologies vs. Taiwan Semiconductor: Which Technology Stock Is a Better Buy for 2027? - The Motley Fool",
+     "Taiwan’s chipmaking giant TSMC to invest $1B in Anthropic, OpenAI - Ars Technica",
+     "ON Semiconductor Stock Gets A Lift From New Chip Platform And Earnings Momentum - Yahoo Finance"
+    ]
+   }
+  },
+  {
+   "id": "2026-11-11 선거·정치 급증",
+   "type": "사건",
+   "props": {
+    "날짜": "2026-11-11",
+    "관심도": 4.81,
+    "헤드라인": [
+     "Close Count project update one week after Election Day - California Voter Foundation",
+     "Scott Colom wins Senate election in Mississippi - PBS",
+     "Democrats Face Backlash After Missing Hegseth Impeachment Vote - The New York Times"
     ]
    }
   },
@@ -3567,12 +3587,12 @@
    "rel": "유사"
   },
   {
-   "source": "2026-11-10 반도체 공급망 급증",
+   "source": "2026-11-11 반도체 공급망 급증",
    "target": "반도체 공급망",
    "rel": "발생"
   },
   {
-   "source": "2026-11-10 선거·정치 급증",
+   "source": "2026-11-11 선거·정치 급증",
    "target": "선거·정치",
    "rel": "발생"
   },
@@ -4710,32 +4730,8 @@
  ],
  "paths": [
   {
-   "theme": "선거·정치",
-   "ratio": 6.31468506681475,
-   "level": "급증",
-   "asset": "UPRO",
-   "hops": 2,
-   "text": "선거·정치 —영향→ 미국 ←노출— UPRO"
-  },
-  {
-   "theme": "선거·정치",
-   "ratio": 6.31468506681475,
-   "level": "급증",
-   "asset": "IEF",
-   "hops": 2,
-   "text": "선거·정치 —영향→ 미국 ←노출— IEF"
-  },
-  {
-   "theme": "선거·정치",
-   "ratio": 6.31468506681475,
-   "level": "급증",
-   "asset": "BIL",
-   "hops": 2,
-   "text": "선거·정치 —영향→ 미국 ←노출— BIL"
-  },
-  {
    "theme": "반도체 공급망",
-   "ratio": 3.777329855446323,
+   "ratio": 6.060634792362887,
    "level": "급증",
    "asset": "UPRO",
    "hops": 4,
@@ -4743,7 +4739,7 @@
   },
   {
    "theme": "반도체 공급망",
-   "ratio": 3.777329855446323,
+   "ratio": 6.060634792362887,
    "level": "급증",
    "asset": "IEF",
    "hops": 4,
@@ -4751,71 +4747,119 @@
   },
   {
    "theme": "반도체 공급망",
-   "ratio": 3.777329855446323,
+   "ratio": 6.060634792362887,
    "level": "급증",
    "asset": "BIL",
    "hops": 4,
    "text": "반도체 공급망 —영향→ 반도체 ←산업— 엔비디아 —소재→ 미국 ←노출— BIL"
   },
   {
-   "theme": "금융 불안",
-   "ratio": 1.178266532816739,
-   "level": "증가",
+   "theme": "선거·정치",
+   "ratio": 4.810744316547386,
+   "level": "급증",
    "asset": "UPRO",
    "hops": 2,
-   "text": "금융 불안 —영향→ 금리 ←노출— UPRO"
+   "text": "선거·정치 —영향→ 미국 ←노출— UPRO"
   },
   {
-   "theme": "금융 불안",
-   "ratio": 1.178266532816739,
-   "level": "증가",
+   "theme": "선거·정치",
+   "ratio": 4.810744316547386,
+   "level": "급증",
    "asset": "IEF",
    "hops": 2,
-   "text": "금융 불안 —영향→ 금리 ←노출— IEF"
+   "text": "선거·정치 —영향→ 미국 ←노출— IEF"
   },
   {
-   "theme": "금융 불안",
-   "ratio": 1.178266532816739,
-   "level": "증가",
+   "theme": "선거·정치",
+   "ratio": 4.810744316547386,
+   "level": "급증",
    "asset": "BIL",
    "hops": 2,
-   "text": "금융 불안 —영향→ 금리 ←노출— BIL"
+   "text": "선거·정치 —영향→ 미국 ←노출— BIL"
   },
   {
    "theme": "암호화폐",
-   "ratio": 1.163199244129554,
-   "level": "증가",
+   "ratio": 1.141152631990886,
+   "level": "보통",
    "asset": "GLD",
    "hops": 2,
    "text": "암호화폐 —영향→ 달러 ←노출— GLD"
   },
   {
    "theme": "암호화폐",
-   "ratio": 1.163199244129554,
-   "level": "증가",
+   "ratio": 1.141152631990886,
+   "level": "보통",
    "asset": "UPRO",
    "hops": 4,
    "text": "암호화폐 —영향→ 달러 ←결정— 연준 —결정→ 금리 ←노출— UPRO"
   },
   {
    "theme": "암호화폐",
-   "ratio": 1.163199244129554,
-   "level": "증가",
+   "ratio": 1.141152631990886,
+   "level": "보통",
    "asset": "IEF",
    "hops": 4,
    "text": "암호화폐 —영향→ 달러 ←결정— 연준 —결정→ 금리 ←노출— IEF"
   },
   {
    "theme": "전기차·배터리",
-   "ratio": 1.133248870987255,
+   "ratio": 1.1368172268907564,
    "level": "보통",
    "asset": "DBC",
    "hops": 2,
    "text": "전기차·배터리 —영향→ 구리 ←노출— DBC"
   },
   {
+   "theme": "금융 불안",
+   "ratio": 1.110497510797534,
+   "level": "보통",
+   "asset": "UPRO",
+   "hops": 2,
+   "text": "금융 불안 —영향→ 금리 ←노출— UPRO"
+  },
+  {
+   "theme": "금융 불안",
+   "ratio": 1.110497510797534,
+   "level": "보통",
+   "asset": "IEF",
+   "hops": 2,
+   "text": "금융 불안 —영향→ 금리 ←노출— IEF"
+  },
+  {
+   "theme": "금융 불안",
+   "ratio": 1.110497510797534,
+   "level": "보통",
+   "asset": "BIL",
+   "hops": 2,
+   "text": "금융 불안 —영향→ 금리 ←노출— BIL"
+  },
+  {
+   "theme": "빅테크 규제",
+   "ratio": 1.1078204116111967,
+   "level": "보통",
+   "asset": "UPRO",
+   "hops": 2,
+   "text": "빅테크 규제 —영향→ 미국 ←노출— UPRO"
+  },
+  {
+   "theme": "빅테크 규제",
+   "ratio": 1.1078204116111967,
+   "level": "보통",
+   "asset": "IEF",
+   "hops": 2,
+   "text": "빅테크 규제 —영향→ 미국 ←노출— IEF"
+  },
+  {
+   "theme": "빅테크 규제",
+   "ratio": 1.1078204116111967,
+   "level": "보통",
+   "asset": "BIL",
+   "hops": 2,
+   "text": "빅테크 규제 —영향→ 미국 ←노출— BIL"
+  },
+  {
    "theme": "무역·관세",
-   "ratio": 1.0897021187007523,
+   "ratio": 1.0681803267930967,
    "level": "보통",
    "asset": "UPRO",
    "hops": 2,
@@ -4823,7 +4867,7 @@
   },
   {
    "theme": "무역·관세",
-   "ratio": 1.0897021187007523,
+   "ratio": 1.0681803267930967,
    "level": "보통",
    "asset": "IEF",
    "hops": 2,
@@ -4831,7 +4875,7 @@
   },
   {
    "theme": "무역·관세",
-   "ratio": 1.0897021187007523,
+   "ratio": 1.0681803267930967,
    "level": "보통",
    "asset": "BIL",
    "hops": 2,
@@ -4839,7 +4883,7 @@
   },
   {
    "theme": "사이버보안",
-   "ratio": 1.0450433015627267,
+   "ratio": 0.9972181864503644,
    "level": "보통",
    "asset": "UPRO",
    "hops": 2,
@@ -4847,7 +4891,7 @@
   },
   {
    "theme": "사이버보안",
-   "ratio": 1.0450433015627267,
+   "ratio": 0.9972181864503644,
    "level": "보통",
    "asset": "IEF",
    "hops": 2,
@@ -4855,35 +4899,11 @@
   },
   {
    "theme": "사이버보안",
-   "ratio": 1.0450433015627267,
+   "ratio": 0.9972181864503644,
    "level": "보통",
    "asset": "BIL",
    "hops": 2,
    "text": "사이버보안 —영향→ 미국 ←노출— BIL"
-  },
-  {
-   "theme": "인플레이션",
-   "ratio": 1.0284839777625088,
-   "level": "보통",
-   "asset": "UPRO",
-   "hops": 2,
-   "text": "인플레이션 —영향→ 금리 ←노출— UPRO"
-  },
-  {
-   "theme": "인플레이션",
-   "ratio": 1.0284839777625088,
-   "level": "보통",
-   "asset": "IEF",
-   "hops": 2,
-   "text": "인플레이션 —영향→ 금리 ←노출— IEF"
-  },
-  {
-   "theme": "인플레이션",
-   "ratio": 1.0284839777625088,
-   "level": "보통",
-   "asset": "BIL",
-   "hops": 2,
-   "text": "인플레이션 —영향→ 금리 ←노출— BIL"
   }
  ]
 }
